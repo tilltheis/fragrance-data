@@ -1,0 +1,17 @@
+[project]
+name = "perfumes"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bs4>=0.0.2",
+    "lxml>=6.0.1",
+    "polars>=1.33.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-watcher>=0.4.3",
+]
