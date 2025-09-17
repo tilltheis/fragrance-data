@@ -4,6 +4,7 @@ from typing import Dict, List
 import re
 import json
 import base64
+import unicodedata
 
 
 def _notes(doc, cls: str) -> List[str]:
@@ -75,11 +76,85 @@ def _collect_statements(text: str) -> List[str]:
     statements = ("\n".join(t.strip() for t in g if t.strip()) for g in text_groups)
     return [statement for statement in statements if statement]
 
+_headers = {
+    "Host": "www.parfumo.de",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0",
+    "Accept": "*/*",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "X-Requested-With": "XMLHttpRequest",
+    "Origin": "https://www.parfumo.de",
+    "Sec-GPC": "1",
+    "Connection": "keep-alive",
+    "Referer": "https://www.parfumo.de/",
+    "Pragma": "no-cache",
+    "Cache-Control": "no-cache",
+    "TE": "trailers",
+    "Cookie": (
+        "PHPSESSID=7mptei66ljk0ukdvv6r61coadp; "
+        "_sp_enable_dfp_personalized_ads=false; "
+        "_sp_su=false; "
+        "euconsent-v2=CQX48QAQX48QAAGABBENB3FgAAAAAAAAAAYgAAAAAAAA.YAAAAAAAAAAA; "
+        "consentUUID=08c152e4-488b-4897-9e40-636baa8ede10_48; "
+        "consentDate=2025-09-17T18:31:38.222Z; "
+        "_ga_DVZQF4Y622=GS2.1.s1758133974$o1$g1$t1758133987$j47$l0$h0; "
+        "_ga=GA1.1.593544889.1758133975"
+    ),
+}
+
+def _download_data(brand: str, name: str) -> None:
+    import requests
+    from pathlib import Path
+
+    livesearch_response = requests.post(
+        "https://www.parfumo.de/action/livesearch/livesearch.php",
+        headers=_headers,
+        data={"q": f"{brand} {name}", "iwear": "0"},
+    )
+    livesearch_response.raise_for_status()
+    livesearch_doc = html.fromstring(livesearch_response.text)
+    overview_url = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-item')]//a/@href")[0]
+
+    overview_brand = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//span[contains(@class, 'brand')]/text()")[0].strip()
+    overview_name = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//div[contains(@class, 'name')]/text()")[0].strip()
+    overview_concentration = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//div[contains(@class, 'name')]//span/text()")
+    overview_concentration = overview_concentration[0].strip() if overview_concentration else None
+
+    livesearch_target_path = Path(f"data/livesearch/{overview_brand}/{overview_name}{f'/{overview_concentration}' if overview_concentration else ''}.html")
+    livesearch_target_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(livesearch_target_path, "w", encoding="utf-8") as f:
+        f.write(livesearch_response.text)
+
+    overview_response = requests.get(
+        overview_url,
+        headers=_headers,
+    )
+    overview_response.raise_for_status()
+
+    overview_target_path = Path(f"data/overview/{overview_brand}/{overview_name}{f'/{overview_concentration}' if overview_concentration else ''}.html")
+    overview_target_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(overview_target_path, "w", encoding="utf-8") as f:
+        f.write(overview_response.text)
+
+    classification_match = re.search("getClassificationChart\\('pie',(\\d+),'([^']+)'\\);", overview_response.text)
+    classification_data = {
+        'p': classification_match.group(1),
+        'h': classification_match.group(2),
+        'csrf_key': re.search("csrf_key:'([^']+)'", overview_response.text).group(1),
+    }
+    classification_response = requests.post(
+        "https://www.parfumo.de/action/perfume/get_classification_pie.php",
+        headers=_headers,
+        data=classification_data,
+    )
+    classification_response.raise_for_status()
+
+    classification_target_path = Path(f"data/classification/{overview_brand}/{overview_name}{f'/{overview_concentration}' if overview_concentration else ''}.html")
+    classification_target_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(classification_target_path, "w", encoding="utf-8") as f:
+        f.write(classification_response.text)
+
 
 if __name__ == "__main__":
-    with open("parfumo-statements/byzantine-amber.html", "r", encoding="utf-8") as f:
-        html_text = f.read()
-
-    for statement in _collect_statements(html_text):
-        print(statement)
-        print("----")
+    _download_data("Sucreabeille", "Byzantine")
