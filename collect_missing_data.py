@@ -5,6 +5,7 @@ import re
 import json
 import base64
 import unicodedata
+import requests
 
 
 def _notes(doc, cls: str) -> List[str]:
@@ -103,39 +104,40 @@ _headers = {
     ),
 }
 
-def _download_data(brand: str, name: str) -> None:
-    import requests
-    from pathlib import Path
+def to_path_part(text: str) -> str:
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii").replace("-", "_")
 
+def to_path(filetype: str, brand: str, name: str, concentration: str | None) -> str:
+    return f"data/{filetype}/{to_path_part(brand)} - {to_path_part(name)}{f' - {to_path_part(concentration)}' if concentration else ''}.html"
+
+def save_data(filetype: str, brand: str, name: str, concentration: str | None, text: str) -> None:
+    path = to_path(filetype, brand, name, concentration)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+def _download_data(brand_query: str, name_query: str) -> None:
     livesearch_response = requests.post(
         "https://www.parfumo.de/action/livesearch/livesearch.php",
         headers=_headers,
-        data={"q": f"{brand} {name}", "iwear": "0"},
+        data={"q": f"{brand_query} {name_query}", "iwear": "0"},
     )
     livesearch_response.raise_for_status()
     livesearch_doc = html.fromstring(livesearch_response.text)
     overview_url = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-item')]//a/@href")[0]
 
-    overview_brand = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//span[contains(@class, 'brand')]/text()")[0].strip()
-    overview_name = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//div[contains(@class, 'name')]/text()")[0].strip()
-    overview_concentration = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//div[contains(@class, 'name')]//span/text()")
-    overview_concentration = overview_concentration[0].strip() if overview_concentration else None
+    brand = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//span[contains(@class, 'brand')]/text()")[0].strip()
+    name = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//div[contains(@class, 'name')]/text()")[0].strip()
+    concentration = livesearch_doc.xpath("//div[contains(@class, 'ls-perfume-info')]//div[contains(@class, 'name')]//span/text()")
+    concentration = concentration[0].strip() if concentration else None
 
-    livesearch_target_path = Path(f"data/livesearch/{overview_brand}/{overview_name}{f'/{overview_concentration}' if overview_concentration else ''}.html")
-    livesearch_target_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(livesearch_target_path, "w", encoding="utf-8") as f:
-        f.write(livesearch_response.text)
+    save_data("livesearch", brand, name, concentration, livesearch_response.text)
 
     overview_response = requests.get(
         overview_url,
         headers=_headers,
     )
     overview_response.raise_for_status()
-
-    overview_target_path = Path(f"data/overview/{overview_brand}/{overview_name}{f'/{overview_concentration}' if overview_concentration else ''}.html")
-    overview_target_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(overview_target_path, "w", encoding="utf-8") as f:
-        f.write(overview_response.text)
+    save_data("overview", brand, name, concentration, livesearch_response.text)
 
     classification_match = re.search("getClassificationChart\\('pie',(\\d+),'([^']+)'\\);", overview_response.text)
     classification_data = {
@@ -149,12 +151,8 @@ def _download_data(brand: str, name: str) -> None:
         data=classification_data,
     )
     classification_response.raise_for_status()
-
-    classification_target_path = Path(f"data/classification/{overview_brand}/{overview_name}{f'/{overview_concentration}' if overview_concentration else ''}.html")
-    classification_target_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(classification_target_path, "w", encoding="utf-8") as f:
-        f.write(classification_response.text)
+    save_data("classification", brand, name, concentration, livesearch_response.text)
 
 
 if __name__ == "__main__":
-    _download_data("Sucreabeille", "Byzantine")
+    _download_data("Armaf", "Club de Nuit Intense Man")
