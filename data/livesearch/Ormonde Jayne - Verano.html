@@ -1,0 +1,44 @@
+
+	<div class="live_search_results">
+					<div class="ptabs-container ptabs-small bg-lightgrey ptabs-nowrap pt-1 pl-0-5 pr-0-5 pb-1"><nav class="flex ptabs "><div class="active action_ls action_order_popular nav_ls" data-order="popular"><span>Beliebt</span></div><div class="action_ls action_order_latest nav_ls" data-order="latest"><span>Neuheiten</span></div><div class="action_ls action_order_name nav_ls" data-order="name"><span>A-Z</span></div><div class="action_ls ml-auto"><a href="https://www.parfumo.de/s_perfumes_x.php?t=1&filter=Ormonde+Jayne+Verano"><i class="fa fa-search-plus"></i> Erweiterte Suche</a></div></nav></div>
+			<div id="ls-perfumes">
+
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/6a/6ae099-montabaco-verano-ormonde-jayne_1200.jpg?width=120&aspect_ratio=1:1" alt="Verano / Montabaco Verano" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey"></div>
+							<div class="name bold">Verano</div>
+							<span class="brand lightgrey text-sm">Ormonde Jayne</span> <span class="label_a small">2019</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Ormonde_Jayne/verano-montabaco-verano" class="ls-perfume-overlay"></a>
+					</div>
+							</div>
+		
+		
+				
+	</div>
+
+	<script>
+		$('.btn_iwear').click(
+			function() {
+				pid = $(this).data('pid');
+				actionPopup(
+					'Trägst du diesen Duft gerade?',
+					'Klicke nur auf <strong>Ja</strong>, wenn du den Duft wirklich trägst. Ansonsten kann dir dein persönlicher Assistant keine zuverlässigen Tipps geben.',
+					'Abbrechen',
+					'Gerade aufgesprüht!',
+					'blue',
+					function() {
+						$('#livesearch').hide();
+						hideActionPopup();
+						updateIWear(pid);
+						smokeBaby();
+					}
+				);
+			}
+		);
+		liveSearchKeyNav('#livesearch', '#s_top');
+	</script>
+
+	

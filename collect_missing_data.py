@@ -229,7 +229,7 @@ if __name__ == "__main__":
         if not os.path.isfile(output_path):
             writer.writeheader()
 
-        for _ in range(64):
+        for _ in range(185):
             next(reader)
 
         for row in reader:

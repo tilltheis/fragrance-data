@@ -1,0 +1,8 @@
+id,brand query,name query,error,stack trace
+88,Diptyque,Eau de Lierre (EdT),list index out of range,
+90,Acqua di Parma,Colonia Leather (EdP),list index out of range,
+100,Phaedon,Tea & Bergamot,list index out of range,
+134,Xerjoff,XJ 1861 Naxos,list index out of range,
+160,Marc Gebauer / Azya,Jalua,list index out of range,
+184,Jovoy Paris,Pavillon Rouge,list index out of range,
+185,Zoologist Perfumes,Rhinoceros (2020),list index out of range,

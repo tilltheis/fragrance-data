@@ -1,0 +1,83 @@
+
+	<div class="live_search_results">
+					<div class="ptabs-container ptabs-small bg-lightgrey ptabs-nowrap pt-1 pl-0-5 pr-0-5 pb-1"><nav class="flex ptabs "><div class="active action_ls action_order_popular nav_ls" data-order="popular"><span>Beliebt</span></div><div class="action_ls action_order_latest nav_ls" data-order="latest"><span>Neuheiten</span></div><div class="action_ls action_order_name nav_ls" data-order="name"><span>A-Z</span></div><div class="action_ls ml-auto"><a href="https://www.parfumo.de/s_perfumes_x.php?t=1&filter=Serge+Lutens+Chergui"><i class="fa fa-search-plus"></i> Erweiterte Suche</a></div></nav></div>
+			<div id="ls-perfumes">
+
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/39/399a8c-chergui-eau-de-parfum-serge-lutens_1200.jpg?width=120&aspect_ratio=1:1" alt="Chergui (Eau de Parfum)" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey">Collection Noire</div>
+							<div class="name bold">Chergui <span class="label_a small upper ml-0-5"> Eau de Parfum</span></div>
+							<span class="brand lightgrey text-sm">Serge Lutens</span> <span class="label_a small">2001</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Serge_Lutens/chergui-eau-de-parfum" class="ls-perfume-overlay"></a>
+					</div>
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/c9/c9a220-chergui-confit-de-parfum-serge-lutens_1200.jpg?width=120&aspect_ratio=1:1" alt="Chergui (Confit de Parfum)" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey"></div>
+							<div class="name bold">Chergui <span class="label_a small upper ml-0-5"> Confit de Parfum</span></div>
+							<span class="brand lightgrey text-sm">Serge Lutens</span> <span class="label_a small">2021</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Serge_Lutens/chergui-confit-de-parfum" class="ls-perfume-overlay"></a>
+					</div>
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/70/707941-toison-d-or-chergui-serge-lutens_1200.jpg?width=120&aspect_ratio=1:1" alt="Toison d'Or - Chergui" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey"></div>
+							<div class="name bold">Toison d'Or - Chergui</div>
+							<span class="brand lightgrey text-sm">Serge Lutens</span> <span class="label_a small">2021</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Serge_Lutens/toison-d-or-chergui" class="ls-perfume-overlay"></a>
+					</div>
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://images.parfumo.de/perfume_bottle/120.png" alt="Chergui Limited Edition" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey"></div>
+							<div class="name bold">Chergui Limited Edition</div>
+							<span class="brand lightgrey text-sm">Serge Lutens</span> <span class="label_a small">2001</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Serge_Lutens/Chergui_Limited_Edition" class="ls-perfume-overlay"></a>
+					</div>
+							</div>
+		
+		
+					<div class="white-box-padding">
+				<div class="text-lg bold"><a href="https://www.parfumo.de/s_blogs.php?q=Serge+Lutens+Chergui" class="black">Blogartikel</a></div>
+				<div class="pb-1 mt-1 mb-1">
+											<a href="https://www.parfumo.de/Benutzer/ParfumoBlog/Blog/Eintrag/491-Chergui-Serge-Lutens" class="pbtn-link pbtn-link-box text-sm blue wrap w-100 mb-1">
+							<img src="https://media.parfumo.com/user_photo/cb/cb_51206ae5614dc2c80aa5d32f9510f8948bd72666_1000.jpg?width=40&aspect_ratio=1:1" class="user-pic-xs" alt="ParfumoBlog" loading="lazy">ParfumoBlog <span class="text-xs lightblue2">vor 16 Jahren</span><br>
+							<div class="blue mt-0-5">Ein besonnener Gentleman - Chergui von Serge Lutens <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</a>
+									</div>
+			</div>
+				
+	</div>
+
+	<script>
+		$('.btn_iwear').click(
+			function() {
+				pid = $(this).data('pid');
+				actionPopup(
+					'Trägst du diesen Duft gerade?',
+					'Klicke nur auf <strong>Ja</strong>, wenn du den Duft wirklich trägst. Ansonsten kann dir dein persönlicher Assistant keine zuverlässigen Tipps geben.',
+					'Abbrechen',
+					'Gerade aufgesprüht!',
+					'blue',
+					function() {
+						$('#livesearch').hide();
+						hideActionPopup();
+						updateIWear(pid);
+						smokeBaby();
+					}
+				);
+			}
+		);
+		liveSearchKeyNav('#livesearch', '#s_top');
+	</script>
+
+	

@@ -1,0 +1,54 @@
+
+	<div class="live_search_results">
+					<div class="ptabs-container ptabs-small bg-lightgrey ptabs-nowrap pt-1 pl-0-5 pr-0-5 pb-1"><nav class="flex ptabs "><div class="active action_ls action_order_popular nav_ls" data-order="popular"><span>Beliebt</span></div><div class="action_ls action_order_latest nav_ls" data-order="latest"><span>Neuheiten</span></div><div class="action_ls action_order_name nav_ls" data-order="name"><span>A-Z</span></div><div class="action_ls ml-auto"><a href="https://www.parfumo.de/s_perfumes_x.php?t=1&filter=Dior+Fahrenheit+%28Eau+de+Toilette%29"><i class="fa fa-search-plus"></i> Erweiterte Suche</a></div></nav></div>
+			<div id="ls-perfumes">
+
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/1a/1ade25-fahrenheit-eau-de-toilette-dior_1200.jpg?width=120&aspect_ratio=1:1" alt="Fahrenheit (Eau de Toilette)" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey">Fahrenheit</div>
+							<div class="name bold">Fahrenheit <span class="label_a small upper ml-0-5"> Eau de Toilette</span></div>
+							<span class="brand lightgrey text-sm">Dior</span> <span class="label_a small">1988</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Dior/Fahrenheit_Eau_de_Toilette" class="ls-perfume-overlay"></a>
+					</div>
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/0c/0cc835-fahrenheit-32-eau-de-toilette-dior_1200.jpg?width=120&aspect_ratio=1:1" alt="Fahrenheit 32 (Eau de Toilette)" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey">Fahrenheit</div>
+							<div class="name bold">Fahrenheit 32 <span class="label_a small upper ml-0-5"> Eau de Toilette</span></div>
+							<span class="brand lightgrey text-sm">Dior</span> <span class="label_a small">2007</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Dior/Fahrenheit_32_Eau_de_Toilette" class="ls-perfume-overlay"></a>
+					</div>
+							</div>
+		
+		
+				
+	</div>
+
+	<script>
+		$('.btn_iwear').click(
+			function() {
+				pid = $(this).data('pid');
+				actionPopup(
+					'Trägst du diesen Duft gerade?',
+					'Klicke nur auf <strong>Ja</strong>, wenn du den Duft wirklich trägst. Ansonsten kann dir dein persönlicher Assistant keine zuverlässigen Tipps geben.',
+					'Abbrechen',
+					'Gerade aufgesprüht!',
+					'blue',
+					function() {
+						$('#livesearch').hide();
+						hideActionPopup();
+						updateIWear(pid);
+						smokeBaby();
+					}
+				);
+			}
+		);
+		liveSearchKeyNav('#livesearch', '#s_top');
+	</script>
+
+	

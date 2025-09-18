@@ -1,0 +1,53 @@
+
+	<div class="live_search_results">
+					<div class="ptabs-container ptabs-small bg-lightgrey ptabs-nowrap pt-1 pl-0-5 pr-0-5 pb-1"><nav class="flex ptabs "><div class="active action_ls action_order_popular nav_ls" data-order="popular"><span>Beliebt</span></div><div class="action_ls action_order_latest nav_ls" data-order="latest"><span>Neuheiten</span></div><div class="action_ls action_order_name nav_ls" data-order="name"><span>A-Z</span></div><div class="action_ls ml-auto"><a href="https://www.parfumo.de/s_perfumes_x.php?t=1&filter=Parfums+de+Nicolai+L%E2%80%99Eau+Mixte"><i class="fa fa-search-plus"></i> Erweiterte Suche</a></div></nav></div>
+			<div id="ls-perfumes">
+
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/43/4378e2-l-eau-mixte-nicolai-parfums-de-nicolai_1200.jpg?width=120&aspect_ratio=1:1" alt="L'Eau miXte" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey"></div>
+							<div class="name bold">L'Eau miXte</div>
+							<span class="brand lightgrey text-sm">Nicolaï / Parfums de Nicolaï</span> <span class="label_a small">2010</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Nicolai/L_Eau_miXte" class="ls-perfume-overlay"></a>
+					</div>
+							</div>
+		
+		
+					<div class="white-box-padding">
+				<div class="text-lg bold"><a href="https://www.parfumo.de/s_blogs.php?q=Parfums+de+Nicolai+L%E2%80%99Eau+Mixte" class="black">Blogartikel</a></div>
+				<div class="pb-1 mt-1 mb-1">
+											<a href="https://www.parfumo.de/Benutzer/ParfumoBlog/Blog/Eintrag/L_Eau_Mixte_Parfums_de_Nicola_The_One_Gentleman_Dolce__Gabbana_Tease_Paris_Hilton_Neue_Dfte_2010" class="pbtn-link pbtn-link-box text-sm blue wrap w-100 mb-1">
+							<img src="https://media.parfumo.com/user_photo/cb/cb_51206ae5614dc2c80aa5d32f9510f8948bd72666_1000.jpg?width=40&aspect_ratio=1:1" class="user-pic-xs" alt="ParfumoBlog" loading="lazy">ParfumoBlog <span class="text-xs lightblue2">vor 15 Jahren</span><br>
+							<div class="blue mt-0-5">L'Eau Mixte (Parfums de Nicolaï), The One Gentleman (Dolce & Gabbana), Tease (Paris Hilton) - Neue Düfte 2010 <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</a>
+									</div>
+			</div>
+				
+	</div>
+
+	<script>
+		$('.btn_iwear').click(
+			function() {
+				pid = $(this).data('pid');
+				actionPopup(
+					'Trägst du diesen Duft gerade?',
+					'Klicke nur auf <strong>Ja</strong>, wenn du den Duft wirklich trägst. Ansonsten kann dir dein persönlicher Assistant keine zuverlässigen Tipps geben.',
+					'Abbrechen',
+					'Gerade aufgesprüht!',
+					'blue',
+					function() {
+						$('#livesearch').hide();
+						hideActionPopup();
+						updateIWear(pid);
+						smokeBaby();
+					}
+				);
+			}
+		);
+		liveSearchKeyNav('#livesearch', '#s_top');
+	</script>
+
+	
