@@ -6,6 +6,11 @@ import json
 import base64
 import unicodedata
 import requests
+import csv
+import os
+import random
+import time
+import traceback
 
 
 def _notes(doc, cls: str) -> List[str]:
@@ -105,7 +110,7 @@ _headers = {
 }
 
 def to_path_part(text: str) -> str:
-    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii").replace("-", "_")
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii").replace("-", "_").replace("/", "_")
 
 def to_path(filetype: str, brand: str, name: str, concentration: str | None) -> str:
     return f"data/{filetype}/{to_path_part(brand)} - {to_path_part(name)}{f' - {to_path_part(concentration)}' if concentration else ''}.html"
@@ -116,10 +121,12 @@ def save_data(filetype: str, brand: str, name: str, concentration: str | None, t
         f.write(text)
 
 def _download_data(brand_query: str, name_query: str) -> None:
+    normalized_name_query = name_query.replace("(EdT", "(Eau de Toilette").replace("(EdP", "(Eau de Parfum").replace("(EdC", "(Eau de Cologne").replace("(EDT", "(Eau de Toilette").replace("(EDP", "(Eau de Parfum").replace("(EDC", "(Eau de Cologne")
+
     livesearch_response = requests.post(
         "https://www.parfumo.de/action/livesearch/livesearch.php",
         headers=_headers,
-        data={"q": f"{brand_query} {name_query}", "iwear": "0"},
+        data={"q": f"{brand_query} {normalized_name_query}", "iwear": "0"},
     )
     livesearch_response.raise_for_status()
     livesearch_doc = html.fromstring(livesearch_response.text)
@@ -137,7 +144,7 @@ def _download_data(brand_query: str, name_query: str) -> None:
         headers=_headers,
     )
     overview_response.raise_for_status()
-    save_data("overview", brand, name, concentration, livesearch_response.text)
+    save_data("overview", brand, name, concentration, overview_response.text)
 
     classification_match = re.search("getClassificationChart\\('pie',(\\d+),'([^']+)'\\);", overview_response.text)
     classification_data = {
@@ -151,8 +158,63 @@ def _download_data(brand_query: str, name_query: str) -> None:
         data=classification_data,
     )
     classification_response.raise_for_status()
-    save_data("classification", brand, name, concentration, livesearch_response.text)
+    save_data("classification", brand, name, concentration, classification_response.text)
+
+    return {
+        "brand": brand,
+        "name": name,
+        "concentration": concentration,
+    }
 
 
 if __name__ == "__main__":
-    _download_data("Armaf", "Club de Nuit Intense Man")
+    snapshot_path = "perfumes_table_snapshot.csv"
+    output_path = "perfumes.csv"
+    error_path = "errors.csv"
+
+    with open(snapshot_path, newline='', encoding='utf-8') as infile, \
+         open(output_path, "a", newline='', encoding='utf-8') as outfile, \
+         open(error_path, "a", newline='', encoding='utf-8') as errfile:
+        reader = csv.DictReader(infile)
+        writer = csv.DictWriter(outfile, fieldnames=["id", "brand query", "name query", "brand", "name", "concentration"])
+        errwriter = csv.DictWriter(errfile, fieldnames=["id", "brand query", "name query", "error", "stack trace"])
+
+        if not os.path.isfile(output_path):
+            writer.writeheader()
+
+        for _ in range(64):
+            next(reader)
+
+        for row in reader:
+            try:
+                id_ = row["ID"]
+                marke = row["Marke"]
+                name = row["Name"]
+
+                print(f"Processing {id_}: {marke} - {name}...")
+
+                data = _download_data(marke, name)
+                writer.writerow({
+                    "id": id_,
+                    "brand query": marke,
+                    "name query": name,
+                    **data
+                })
+                outfile.flush()
+            except Exception as e:
+                print(f"Error on {id_}: {marke} - {name}: {e}")
+
+                if not os.path.isfile(error_path):
+                    errwriter.writeheader()
+
+                errwriter.writerow({
+                    "id": id_,
+                    "brand query": marke,
+                    "name query": name,
+                    "error": str(e),
+                    "stack trace": traceback.format_exc()
+                })
+                errfile.flush()
+                continue
+            finally:
+                time.sleep(random.uniform(30, 120))
