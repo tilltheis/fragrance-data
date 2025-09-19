@@ -335,62 +335,36 @@ def sync_all_data():
     data_file_path = "perfumes.jsonl"
     temp_file_path = "perfumes.jsonl~"
 
-    normalized_file_path = "perfumes.csv"
-    error_file_path = "errors.csv"
+    snapshot_file_path = "perfumes_table_snapshot.csv"
 
     with (
         open(data_file_path, "r", encoding="utf-8") as dataf,
         open(temp_file_path, "w", encoding="utf-8") as tempf,
-        open(normalized_file_path, "r", encoding="utf-8") as normalizedf,
-        open(error_file_path, "r", encoding="utf-8") as errorf,
+        open(snapshot_file_path, "r", encoding="utf-8") as snapshotf,
     ):
-        data = {json.loads(line)["id"]: line for line in dataf}
+        data = {json.loads(line)["id"]: json.loads(line) for line in dataf}
 
-        normalized_reader = csv.DictReader(normalizedf)
-        error_reader = csv.DictReader(errorf)
+        snapshot_reader = csv.DictReader(snapshotf)
 
-        for row in normalized_reader:
-            id_ = int(row["id"])
-            brand_query = row["brand query"]
-            name_query = row["name query"]
-            brand = row["brand"]
-            name = row["name"]
-            concentration = row["concentration"] or None
+        for row in snapshot_reader:
+            id_ = int(row["ID"])
+            rating = row["Meine Bewertung"]
+            reason = row["Mein Kommentar"]
+            sellers = row["Verkaeufer"]
+            comment = row["Kommentar"]
 
-            print(f"Processing {id_}: {brand} - {name}...")
-
-            path = to_path("overview", brand, name, concentration)
-            if not os.path.isfile(path):
-                print(f"Missing overview file for {id_}: {brand} - {name}")
+            if id_ == 240: # G'DAY
                 continue
 
-            path_classification = to_path("classification", brand, name, concentration)
-            if not os.path.isfile(path_classification):
-                print(f"Missing classification file for {id_}: {brand} - {name}")
-                continue
+            data[id_] |= {
+                "rating": float(rating) if rating else None,
+                "reason": reason if reason else None,
+                "sellers": [s.strip() for s in sellers.split(",")] if sellers else None,
+                "comment": comment if comment else None,
+            }
 
-            with (
-                open(path, encoding="utf-8") as f_overview,
-                open(path_classification, encoding="utf-8") as f_classification,
-            ):
-                overview_text = f_overview.read()
-                classification_text = f_classification.read()
-
-                try:
-                    obj = analyze_scent(overview_text, classification_text)
-                    obj = {
-                        "id": id_,
-                        "brand query": brand_query,
-                        "name query": name_query,
-                        "brand": brand,
-                        "name": name,
-                        "concentration": concentration,
-                    } | obj
-                    tempf.write(json.dumps(obj, ensure_ascii=False) + "\n")
-                except Exception as e:
-                    print(f"Error processing {id_}: {brand} - {name}: {e}")
-                    print(traceback.format_exc())
-                    continue
+        for line in data.values():
+            tempf.write(json.dumps(line, ensure_ascii=False) + "\n")
 
     shutil.move(temp_file_path, data_file_path)
 
