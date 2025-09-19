@@ -5,22 +5,16 @@ from collect_missing_data import analyze_scent
 class Test(TestCase):
     def test__pyramid(self):
         parfumo_text = open(
-            "data/overview/byzantine-amber.html", encoding="utf-8"
+            "data/overview/Francesca Bianchi - Byzantine Amber.html", encoding="utf-8"
         ).read()
         parfumo_classification_text = open(
-            "data/classification/byzantine-amber.html", encoding="utf-8"
+            "data/classification/Francesca Bianchi - Byzantine Amber.html",
+            encoding="utf-8",
         ).read()
 
-        data = analyze_scent(
-            parfumo_text,
-            parfumo_classification_text,
-            brand="Francesca Bianchi",
-            name="Byzantine Amber",
-        )
+        data = analyze_scent(parfumo_text, parfumo_classification_text)
 
         assert data == {
-            "brand": "Francesca Bianchi",
-            "name": "Byzantine Amber",
             "accords": [
                 "Ledrig",
                 "Rauchig",
@@ -109,17 +103,14 @@ class Test(TestCase):
         }
 
     def test__linear(self):
-        parfumo_text = open("data/overview/oud-seven.html", encoding="utf-8").read()
+        parfumo_text = open(
+            "data/overview/Matiere Premiere - Oud Seven.html", encoding="utf-8"
+        ).read()
         parfumo_classification_text = open(
-            "data/classification/oud-seven.html", encoding="utf-8"
+            "data/classification/Matiere Premiere - Oud Seven.html", encoding="utf-8"
         ).read()
 
-        data = analyze_scent(
-            parfumo_text,
-            parfumo_classification_text,
-            brand="Francesca Bianchi",
-            name="Byzantine Amber",
-        )
+        data = analyze_scent(parfumo_text, parfumo_classification_text)
 
         assert data["structure"] == "linear"
         assert data["notes"] == [
@@ -132,3 +123,33 @@ class Test(TestCase):
             "haitianisches Vetiver",
             "Nagarmotha",
         ]
+
+    def test__analyze_scent__without_pricing_data(self):
+        parfumo_text = open(
+            "data/overview/Diptyque - L'Eau de Tarocco.html", encoding="utf-8"
+        ).read()
+        parfumo_classification_text = open(
+            "data/classification/Diptyque - L'Eau de Tarocco.html", encoding="utf-8"
+        ).read()
+
+        assert (
+            analyze_scent(parfumo_text, parfumo_classification_text)["pricing"] is None
+        )
+        assert (
+            analyze_scent(parfumo_text, parfumo_classification_text)["scent"]
+            is not None
+        )
+
+    def test__analyze_scent__without_classification_chart(self):
+        parfumo_text = open(
+            "data/overview/Mr Marvis - Club Marevista.html", encoding="utf-8"
+        ).read()
+        parfumo_classification_text = open(
+            "data/classification/Mr Marvis - Club Marevista.html", encoding="utf-8"
+        ).read()
+
+        assert analyze_scent(parfumo_text, parfumo_classification_text)["type"] is None
+        assert (
+            analyze_scent(parfumo_text, parfumo_classification_text)["occasion"]
+            is not None
+        )
