@@ -1,0 +1,67 @@
+
+	<div class="live_search_results">
+					<div class="ptabs-container ptabs-small bg-lightgrey ptabs-nowrap pt-1 pl-0-5 pr-0-5 pb-1"><nav class="flex ptabs "><div class="active action_ls action_order_popular nav_ls" data-order="popular"><span>Beliebt</span></div><div class="action_ls action_order_latest nav_ls" data-order="latest"><span>Neuheiten</span></div><div class="action_ls action_order_name nav_ls" data-order="name"><span>A-Z</span></div><div class="action_ls ml-auto"><a href="https://www.parfumo.de/s_perfumes_x.php?t=1&filter=Xerjoff+Naxos"><i class="fa fa-search-plus"></i> Erweiterte Suche</a></div></nav></div>
+			<div id="ls-perfumes">
+
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/87/87c77f_naxos-xerjoff_1200.jpg?width=120&aspect_ratio=1:1" alt="Naxos" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey">1861</div>
+							<div class="name bold">Naxos</div>
+							<span class="brand lightgrey text-sm">Xerjoff</span> <span class="label_a small">2015</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Xerjoff/naxos" class="ls-perfume-overlay"></a>
+					</div>
+							</div>
+		
+		
+			<div class="grey-box not-rounded">
+
+				
+				
+				
+				
+									<div class="text-lg bold"><a href="https://www.parfumo.de/Entdecken/Tags" class="black">Tags</a></div>
+					<div class="pb-1 mt-1 mb-1">
+													<a href="https://www.parfumo.de/Entdecken/Tags/xerjoff+naxos"><span class="pbtn pbtn-tiny pbtn-lightgrey2 mb-0-5"><i class="fa fa-hashtag opacity-25"></i> xerjoff naxos</span></a>
+													<a href="https://www.parfumo.de/Entdecken/Tags/xerjoff+naxos+hon"><span class="pbtn pbtn-tiny pbtn-lightgrey2 mb-0-5"><i class="fa fa-hashtag opacity-25"></i> xerjoff naxos hon</span></a>
+											</div>
+				
+							</div>
+		
+					<div class="white-box-padding">
+				<div class="text-lg bold"><a href="https://www.parfumo.de/s_blogs.php?q=Xerjoff+Naxos" class="black">Blogartikel</a></div>
+				<div class="pb-1 mt-1 mb-1">
+											<a href="https://www.parfumo.de/Benutzer/Sebabro1981/Blog/Eintrag/xerjoff-naxos-ein-traum-vom-parfum" class="pbtn-link pbtn-link-box text-sm blue wrap w-100 mb-1">
+							<img src="https://media.parfumo.com/user_photo/8a/8a_e7add476e5e5d95c33d3e4ab77e033a7c382f265_1000.jpg?width=40&aspect_ratio=1:1" class="user-pic-xs" alt="Sebabro1981" loading="lazy">Sebabro1981 <span class="text-xs lightblue2">vor 4 Jahren</span><br>
+							<div class="blue mt-0-5">Xerjoff Naxos ein Traum vom Parfüm  <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</a>
+									</div>
+			</div>
+				
+	</div>
+
+	<script>
+		$('.btn_iwear').click(
+			function() {
+				pid = $(this).data('pid');
+				actionPopup(
+					'Trägst du diesen Duft gerade?',
+					'Klicke nur auf <strong>Ja</strong>, wenn du den Duft wirklich trägst. Ansonsten kann dir dein persönlicher Assistant keine zuverlässigen Tipps geben.',
+					'Abbrechen',
+					'Gerade aufgesprüht!',
+					'blue',
+					function() {
+						$('#livesearch').hide();
+						hideActionPopup();
+						updateIWear(pid);
+						smokeBaby();
+					}
+				);
+			}
+		);
+		liveSearchKeyNav('#livesearch', '#s_top');
+	</script>
+
+	

@@ -20,11 +20,6 @@ def _notes(doc, cls: str) -> List[str]:
     return [t for t in doc.xpath(xp) if t.strip()]
 
 
-def _accords(doc) -> List[str]:
-    xp = "//h2[normalize-space()='Duftrichtung']/following-sibling::*[1]//text()"
-    return [t for t in doc.xpath(xp) if t.strip()]
-
-
 def _rating(doc, cat: str) -> List[str]:
     xp = f"//div[contains(@class,'rating-details') and @data-type='{cat}']/@data-voting_distribution"
     res = doc.xpath(xp)
@@ -46,7 +41,6 @@ def analyze_scent(
     parfumo_doc = html.fromstring(parfumo_text)
 
     obj = {
-        "accords": _accords(parfumo_doc),
         "scent": _rating(parfumo_doc, "scent"),
         "longevity": _rating(parfumo_doc, "durability"),
         "sillage": _rating(parfumo_doc, "sillage"),
@@ -203,7 +197,7 @@ def _download_data_for_perfume(brand_query: str, name_query: str) -> None:
 
 
 def download_all_data():
-    snapshot_path = "perfumes_table_snapshot.csv"
+    snapshot_path = "todo.csv"
     output_path = "perfumes.csv"
     error_path = "errors.csv"
 
@@ -232,8 +226,8 @@ def download_all_data():
         if not os.path.isfile(output_path):
             writer.writeheader()
 
-        for _ in range(333):
-            next(reader)
+        # for _ in range(333):
+        #     next(reader)
 
         for row in reader:
             try:
@@ -356,7 +350,7 @@ def sync_all_data():
         error_reader = csv.DictReader(errorf)
 
         for row in normalized_reader:
-            id_ = row["id"]
+            id_ = int(row["id"])
             brand_query = row["brand query"]
             name_query = row["name query"]
             brand = row["brand"]
@@ -384,14 +378,14 @@ def sync_all_data():
 
                 try:
                     obj = analyze_scent(overview_text, classification_text)
-                    obj |= {
+                    obj = {
                         "id": id_,
                         "brand query": brand_query,
                         "name query": name_query,
                         "brand": brand,
                         "name": name,
                         "concentration": concentration,
-                    }
+                    } | obj
                     tempf.write(json.dumps(obj, ensure_ascii=False) + "\n")
                 except Exception as e:
                     print(f"Error processing {id_}: {brand} - {name}: {e}")

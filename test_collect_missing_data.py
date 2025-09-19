@@ -15,14 +15,7 @@ class Test(TestCase):
         data = analyze_scent(parfumo_text, parfumo_classification_text)
 
         assert data == {
-            "accords": [
-                "Ledrig",
-                "Rauchig",
-                "Harzig",
-                "Würzig",
-                "Orientalisch",
-            ],
-            # "scent": 79.476,
+             # "scent": 79.476,
             "scent": {
                 "0": 2,
                 "10": 1,
