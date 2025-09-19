@@ -1,0 +1,64 @@
+
+	<div class="live_search_results">
+					<div class="ptabs-container ptabs-small bg-lightgrey ptabs-nowrap pt-1 pl-0-5 pr-0-5 pb-1"><nav class="flex ptabs "><div class="active action_ls action_order_popular nav_ls" data-order="popular"><span>Beliebt</span></div><div class="action_ls action_order_latest nav_ls" data-order="latest"><span>Neuheiten</span></div><div class="action_ls action_order_name nav_ls" data-order="name"><span>A-Z</span></div><div class="action_ls ml-auto"><a href="https://www.parfumo.de/s_perfumes_x.php?t=1&filter=Tauer+Perfumes+L%E2%80%99Air+du+D%C3%A9sert+Marocain"><i class="fa fa-search-plus"></i> Erweiterte Suche</a></div></nav></div>
+			<div id="ls-perfumes">
+
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/83/833fbd-02-l-air-du-desert-marocain-eau-de-toilette-intense-tauer-perfumes_1200.jpg?width=120&aspect_ratio=1:1" alt="№ 02 - L'Air du Désert Marocain (Eau de Toilette Intense)" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey">Perfume Classics</div>
+							<div class="name bold">№ 02 - L'Air du Désert Marocain <span class="label_a small upper ml-0-5"> Eau de Toilette Intense</span></div>
+							<span class="brand lightgrey text-sm">Tauer Perfumes</span> <span class="label_a small">2005</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Tauer/no-02-l-air-du-desert-marocain-eau-de-toilette-intense" class="ls-perfume-overlay"></a>
+					</div>
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/ba/ba975d-l-air-du-desert-marocain-solid-perfume-tauer-perfumes_1200.jpg?width=120&aspect_ratio=1:1" alt="L'Air du Désert Marocain (Solid Perfume)" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey"></div>
+							<div class="name bold">L'Air du Désert Marocain <span class="label_a small upper ml-0-5"> Solid Perfume</span></div>
+							<span class="brand lightgrey text-sm">Tauer Perfumes</span> <span class="label_a small">2020</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Tauer/l-air-du-desert-marocain-solid-perfume" class="ls-perfume-overlay"></a>
+					</div>
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/ac/ac1145_l-air-du-desert-marocain-noir-tauer-perfumes_1200.jpg?width=120&aspect_ratio=1:1" alt="L'Air du Désert Marocain Noir" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey">Perfume Classics</div>
+							<div class="name bold">L'Air du Désert Marocain Noir</div>
+							<span class="brand lightgrey text-sm">Tauer Perfumes</span> <span class="label_a small">2025</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Tauer/l-air-du-desert-marocain-noir" class="ls-perfume-overlay"></a>
+					</div>
+							</div>
+		
+		
+				
+	</div>
+
+	<script>
+		$('.btn_iwear').click(
+			function() {
+				pid = $(this).data('pid');
+				actionPopup(
+					'Trägst du diesen Duft gerade?',
+					'Klicke nur auf <strong>Ja</strong>, wenn du den Duft wirklich trägst. Ansonsten kann dir dein persönlicher Assistant keine zuverlässigen Tipps geben.',
+					'Abbrechen',
+					'Gerade aufgesprüht!',
+					'blue',
+					function() {
+						$('#livesearch').hide();
+						hideActionPopup();
+						updateIWear(pid);
+						smokeBaby();
+					}
+				);
+			}
+		);
+		liveSearchKeyNav('#livesearch', '#s_top');
+	</script>
+
+	

@@ -1,0 +1,271 @@
+
+	<div id="classification_community" class="chart-container mt-2">
+    
+    
+    <script>
+        require.config({
+            baseUrl: "https://www.parfumo.de/js/plugins/",
+            shim: {
+                'amcharts4/core': {
+                    init: function () {
+                        return window.am4core;
+                    }
+                },
+                'amcharts4/charts': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/charts',
+                    init: function () {
+                        return window.am4charts;
+                    }
+                },
+                'amcharts4/themes/animated': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/themes/animated',
+                    init: function () {
+                        return window.am4themes_animated;
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+
+		require([
+			'amcharts4/core',
+			'amcharts4/charts',
+			'amcharts4/themes/animated'
+		], function (am4core, am4charts, am4themes_animated) {
+				
+			am4core.addLicense("CH59076979");
+			am4core.useTheme(am4themes_animated);
+
+			var chart4 = am4core.create("chartdiv4", am4charts.PieChart);
+
+			chart4.data = [{"ct_name":"W\u00fcrzig","votes":"73"},{"ct_name":"S\u00fc\u00df","votes":"61"},{"ct_name":"Rauchig","votes":"77"},{"ct_name":"Orientalisch","votes":"70"},{"ct_name":"Holzig","votes":"70"},{"ct_name":"Harzig","votes":"45"},{"ct_name":"Erdig","votes":"37"}];
+			chart4.radius = am4core.percent(60);
+
+			var pieSeries4 = chart4.series.push(new am4charts.PieSeries());
+			pieSeries4.labels.template.text = "{category} {value.percent.formatNumber('#.')}%";
+			pieSeries4.labels.template.fill = am4core.color("#55636F"); 
+			pieSeries4.colors.list = [am4core.color("#9bbcb7"),am4core.color("#d1a2ff"),am4core.color("#a6a6a6"),am4core.color("#c16692"),am4core.color("#d79785"),am4core.color("#eab99e"),am4core.color("#ad868b")];
+			pieSeries4.dataFields.value = "votes";
+			pieSeries4.dataFields.category = "ct_name";
+			pieSeries4.fontSize = 11;
+			pieSeries4.hiddenState.properties.endAngle = -90;
+			pieSeries4.hiddenState.properties.startAngle = -90;
+			pieSeries4.ticks.template.stroke = am4core.color("#55636F");
+							
+        });
+
+    </script>
+    <div class="col mb-2">
+        <span class="black bold">Dufttyp</span>
+            <span class="text-sm lightgrey">(433 Stimmen)</span>
+        <div id="chartdiv4" class="chart_placeholder"></div>
+    </div>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+
+
+    <script>
+        require.config({
+            baseUrl: "https://www.parfumo.de/js/plugins/",
+            shim: {
+                'amcharts4/core': {
+                    init: function () {
+                        return window.am4core;
+                    }
+                },
+                'amcharts4/charts': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/charts',
+                    init: function () {
+                        return window.am4charts;
+                    }
+                },
+                'amcharts4/themes/animated': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/themes/animated',
+                    init: function () {
+                        return window.am4themes_animated;
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+
+		require([
+			'amcharts4/core',
+			'amcharts4/charts',
+			'amcharts4/themes/animated'
+		], function (am4core, am4charts, am4themes_animated) {
+				
+			am4core.addLicense("CH59076979");
+			am4core.useTheme(am4themes_animated);
+
+			var chart1 = am4core.create("chartdiv1", am4charts.PieChart);
+
+			chart1.data = [{"ct_name":"Herren","votes":"96"},{"ct_name":"Damen","votes":"24"},{"ct_name":"Klassisch","votes":"57"},{"ct_name":"Modern","votes":"27"}];
+			chart1.radius = am4core.percent(60);
+
+			var pieSeries1 = chart1.series.push(new am4charts.PieSeries());
+			pieSeries1.labels.template.text = "{category} {value.percent.formatNumber('#.')}%";
+			pieSeries1.labels.template.fill = am4core.color("#55636F"); 
+			pieSeries1.colors.list = [am4core.color("#8aafee"),am4core.color("#f1a1f1"),am4core.color("#aaafc8"),am4core.color("#cbd5ea")];
+			pieSeries1.dataFields.value = "votes";
+			pieSeries1.dataFields.category = "ct_name";
+			pieSeries1.fontSize = 11;
+			pieSeries1.hiddenState.properties.endAngle = -90;
+			pieSeries1.hiddenState.properties.startAngle = -90;
+			pieSeries1.ticks.template.stroke = am4core.color("#55636F");
+							
+        });
+
+    </script>
+    <div class="col mb-2">
+        <span class="black bold">Stil</span>
+            <span class="text-sm lightgrey">(204 Stimmen)</span>
+        <div id="chartdiv1" class="chart_placeholder"></div>
+    </div>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+
+
+    <script>
+        require.config({
+            baseUrl: "https://www.parfumo.de/js/plugins/",
+            shim: {
+                'amcharts4/core': {
+                    init: function () {
+                        return window.am4core;
+                    }
+                },
+                'amcharts4/charts': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/charts',
+                    init: function () {
+                        return window.am4charts;
+                    }
+                },
+                'amcharts4/themes/animated': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/themes/animated',
+                    init: function () {
+                        return window.am4themes_animated;
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+
+		require([
+			'amcharts4/core',
+			'amcharts4/charts',
+			'amcharts4/themes/animated'
+		], function (am4core, am4charts, am4themes_animated) {
+				
+			am4core.addLicense("CH59076979");
+			am4core.useTheme(am4themes_animated);
+
+			var chart3 = am4core.create("chartdiv3", am4charts.PieChart);
+
+			chart3.data = [{"ct_name":"Winter","votes":"93"},{"ct_name":"Herbst","votes":"88"},{"ct_name":"Sommer","votes":"15"},{"ct_name":"Fr\u00fchling","votes":"39"}];
+			chart3.radius = am4core.percent(60);
+
+			var pieSeries3 = chart3.series.push(new am4charts.PieSeries());
+			pieSeries3.labels.template.text = "{category} {value.percent.formatNumber('#.')}%";
+			pieSeries3.labels.template.fill = am4core.color("#55636F"); 
+			pieSeries3.colors.list = [am4core.color("#a2cbff"),am4core.color("#d9b1be"),am4core.color("#ffd667"),am4core.color("#badc82")];
+			pieSeries3.dataFields.value = "votes";
+			pieSeries3.dataFields.category = "ct_name";
+			pieSeries3.fontSize = 11;
+			pieSeries3.hiddenState.properties.endAngle = -90;
+			pieSeries3.hiddenState.properties.startAngle = -90;
+			pieSeries3.ticks.template.stroke = am4core.color("#55636F");
+							
+        });
+
+    </script>
+    <div class="col mb-2">
+        <span class="black bold">Jahreszeit</span>
+            <span class="text-sm lightgrey">(235 Stimmen)</span>
+        <div id="chartdiv3" class="chart_placeholder"></div>
+    </div>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+
+
+    <script>
+        require.config({
+            baseUrl: "https://www.parfumo.de/js/plugins/",
+            shim: {
+                'amcharts4/core': {
+                    init: function () {
+                        return window.am4core;
+                    }
+                },
+                'amcharts4/charts': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/charts',
+                    init: function () {
+                        return window.am4charts;
+                    }
+                },
+                'amcharts4/themes/animated': {
+                    deps: ['amcharts4/core'],
+                    exports: 'amcharts4/themes/animated',
+                    init: function () {
+                        return window.am4themes_animated;
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+
+		require([
+			'amcharts4/core',
+			'amcharts4/charts',
+			'amcharts4/themes/animated'
+		], function (am4core, am4charts, am4themes_animated) {
+				
+			am4core.addLicense("CH59076979");
+			am4core.useTheme(am4themes_animated);
+
+			var chart2 = am4core.create("chartdiv2", am4charts.PieChart);
+
+			chart2.data = [{"ct_name":"T\u00e4glich","votes":"13"},{"ct_name":"Freizeit","votes":"49"},{"ct_name":"Ausgehen","votes":"81"},{"ct_name":"Arbeit","votes":"12"},{"ct_name":"Abend","votes":"88"}];
+			chart2.radius = am4core.percent(60);
+
+			var pieSeries2 = chart2.series.push(new am4charts.PieSeries());
+			pieSeries2.labels.template.text = "{category} {value.percent.formatNumber('#.')}%";
+			pieSeries2.labels.template.fill = am4core.color("#55636F"); 
+			pieSeries2.colors.list = [am4core.color("#a7dcf3"),am4core.color("#f6ea86"),am4core.color("#a096e8"),am4core.color("#c1c1c1"),am4core.color("#f480ac")];
+			pieSeries2.dataFields.value = "votes";
+			pieSeries2.dataFields.category = "ct_name";
+			pieSeries2.fontSize = 11;
+			pieSeries2.hiddenState.properties.endAngle = -90;
+			pieSeries2.hiddenState.properties.startAngle = -90;
+			pieSeries2.ticks.template.stroke = am4core.color("#55636F");
+							
+        });
+
+    </script>
+    <div class="col mb-2">
+        <span class="black bold">Anlass</span>
+            <span class="text-sm lightgrey">(243 Stimmen)</span>
+        <div id="chartdiv2" class="chart_placeholder"></div>
+    </div>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+

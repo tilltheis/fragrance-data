@@ -1,0 +1,53 @@
+
+	<div class="live_search_results">
+					<div class="ptabs-container ptabs-small bg-lightgrey ptabs-nowrap pt-1 pl-0-5 pr-0-5 pb-1"><nav class="flex ptabs "><div class="active action_ls action_order_popular nav_ls" data-order="popular"><span>Beliebt</span></div><div class="action_ls action_order_latest nav_ls" data-order="latest"><span>Neuheiten</span></div><div class="action_ls action_order_name nav_ls" data-order="name"><span>A-Z</span></div><div class="action_ls ml-auto"><a href="https://www.parfumo.de/s_perfumes_x.php?t=1&filter=Narciso+Rodriguez+Narciso+%28Eau+de+Parfum+2014%29"><i class="fa fa-search-plus"></i> Erweiterte Suche</a></div></nav></div>
+			<div id="ls-perfumes">
+
+									<div class="ls-perfume-item flex pointer">
+						<div class="ls-perfume-img">
+							<img src="https://media.parfumo.com/perfumes/d9/d92c6f-narciso-eau-de-parfum-narciso-rodriguez_1200.jpg?width=120&aspect_ratio=1:1" alt="Narciso (Eau de Parfum)" onerror="this.style.display='none';" loading="lazy">
+						</div>
+						<div class="ls-perfume-info">
+							<div class="text-2xs lightgrey"></div>
+							<div class="name bold">Narciso <span class="label_a small upper ml-0-5"> Eau de Parfum</span></div>
+							<span class="brand lightgrey text-sm">Narciso Rodriguez</span> <span class="label_a small">2014</span>						</div>
+												<a href="https://www.parfumo.de/Parfums/Narciso_Rodriguez/Narciso" class="ls-perfume-overlay"></a>
+					</div>
+							</div>
+		
+		
+					<div class="white-box-padding">
+				<div class="text-lg bold"><a href="https://www.parfumo.de/s_blogs.php?q=Narciso+Rodriguez+Narciso+%28Eau+de+Parfum+2014%29" class="black">Blogartikel</a></div>
+				<div class="pb-1 mt-1 mb-1">
+											<a href="https://www.parfumo.de/Benutzer/Shelynx/Blog/Eintrag/Parfums_zum_Anziehen_Teil_12_Narciso_Rodriguez_essence_Eau_de_musc_EdT" class="pbtn-link pbtn-link-box text-sm blue wrap w-100 mb-1">
+							<img src="https://media.parfumo.com/user_photo/0f/0f_a8c004a91df8503c99559e35f789de6390e8f12e_1000.jpg?width=40&aspect_ratio=1:1" class="user-pic-xs" alt="Shelynx" loading="lazy">Shelynx <span class="text-xs lightblue2">vor 13 Jahren</span><br>
+							<div class="blue mt-0-5">Parfums zum Anziehen - Teil 12 - Narciso Rodriguez - essence Eau de musc (EdT) <i class="fa fa-angle-right" aria-hidden="true"></i></div>
+						</a>
+									</div>
+			</div>
+				
+	</div>
+
+	<script>
+		$('.btn_iwear').click(
+			function() {
+				pid = $(this).data('pid');
+				actionPopup(
+					'Trägst du diesen Duft gerade?',
+					'Klicke nur auf <strong>Ja</strong>, wenn du den Duft wirklich trägst. Ansonsten kann dir dein persönlicher Assistant keine zuverlässigen Tipps geben.',
+					'Abbrechen',
+					'Gerade aufgesprüht!',
+					'blue',
+					function() {
+						$('#livesearch').hide();
+						hideActionPopup();
+						updateIWear(pid);
+						smokeBaby();
+					}
+				);
+			}
+		);
+		liveSearchKeyNav('#livesearch', '#s_top');
+	</script>
+
+	
