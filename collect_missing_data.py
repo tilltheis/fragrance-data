@@ -335,33 +335,69 @@ def sync_all_data():
     data_file_path = "perfumes.jsonl"
     temp_file_path = "perfumes.jsonl~"
 
-    snapshot_file_path = "perfumes_table_snapshot.csv"
+    owned_ids = {
+        56,
+        57,
+        59,
+        132,
+        148,
+        150,
+        153,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        179,
+        198,
+        199,
+        200,
+        227,
+        297,
+        184,
+        186,
+        209,
+        213,
+        246,
+        247,
+        248,
+        251,
+        253,
+        273,
+        277,
+        283,
+        285,
+        287,
+        292,
+        303,
+        307,
+        308,
+        309,
+        315,
+        317,
+        203,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+    }
 
     with (
         open(data_file_path, "r", encoding="utf-8") as dataf,
         open(temp_file_path, "w", encoding="utf-8") as tempf,
-        open(snapshot_file_path, "r", encoding="utf-8") as snapshotf,
     ):
         data = {json.loads(line)["id"]: json.loads(line) for line in dataf}
 
-        snapshot_reader = csv.DictReader(snapshotf)
-
-        for row in snapshot_reader:
-            id_ = int(row["ID"])
-            rating = row["Meine Bewertung"]
-            reason = row["Mein Kommentar"]
-            sellers = row["Verkaeufer"]
-            comment = row["Kommentar"]
-
-            if id_ == 240: # G'DAY
-                continue
-
-            data[id_] |= {
-                "rating": float(rating) if rating else None,
-                "reason": reason if reason else None,
-                "sellers": [s.strip() for s in sellers.split(",")] if sellers else None,
-                "comment": comment if comment else None,
-            }
+        for row in data.values():
+            id_ = int(row["id"])
+            data[id_]["owned"] = id_ in owned_ids
 
         for line in data.values():
             tempf.write(json.dumps(line, ensure_ascii=False) + "\n")
