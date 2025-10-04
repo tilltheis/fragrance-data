@@ -18,22 +18,33 @@ jobs:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
       
-      - name: ls before
-        run: ls -la
-
       - name: Set up uv
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true # caches uv + venvs automatically
+            
+      - name: Restore Python installation
+        uses: actions/cache/restore@v4
+        id: python-cache-restore
+        with:
+          path: ~/.local/share/uv/python
+          key: ${{ runner.os }}-python-3.13-${{ hashFiles('.github/workflows/fetch-static-fragrance-data.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-python-3.13-
 
       - name: Install Python (managed by uv)
+        if: steps.python-cache-restore.outputs.cache-hit != 'true'
         run: uv python install 3.13
+        
+      - name: Save Python installation
+        if: steps.python-cache-restore.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.local/share/uv/python
+          key: ${{ runner.os }}-python-3.13-${{ hashFiles('.github/workflows/fetch-static-fragrance-data.yaml') }}
 
       - name: Sync dependencies (locked)
         run: uv sync --frozen
-
-      - name: ls after
-        run: ls -la
 
       - name: Run processor
         run: uv run collect_missing_data.py
