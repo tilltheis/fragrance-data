@@ -1,0 +1,44 @@
+name: Fetch Static Fragrance Data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: process-entry-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      
+      - name: ls before
+        run: ls -la
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true # caches uv + venvs automatically
+
+      - name: Install Python (managed by uv)
+        run: uv python install 3.13
+
+      - name: Sync dependencies (locked)
+        run: uv sync --frozen
+
+      - name: ls after
+        run: ls -la
+
+      - name: Run processor
+        run: uv run collect_missing_data.py
+
+      - name: Show changes
+        run: |
+          git status --porcelain
+          git diff --stat || true

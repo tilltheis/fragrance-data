@@ -406,13 +406,4 @@ def sync_all_data():
 
 
 if __name__ == "__main__":
-    action = sys.argv[1] if len(sys.argv) > 1 else None
-    match action:
-        case "download":
-            download_all_data()
-        case "assemble":
-            assemble_all_data()
-        case "sync":
-            sync_all_data()
-        case _:
-            print(f"Unknown action: {action}")
+    _download_data_for_perfume("Penhaligon's", "Blenheim Bouquet")
