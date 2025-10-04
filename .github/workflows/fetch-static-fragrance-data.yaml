@@ -7,7 +7,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: process-entry-${{ github.ref }}
+  group: fetch-static-fragrance-data-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -21,27 +21,8 @@ jobs:
       - name: Set up uv
         uses: astral-sh/setup-uv@v6
         with:
-          enable-cache: true # caches uv + venvs automatically
-            
-      - name: Restore Python installation
-        uses: actions/cache/restore@v4
-        id: python-cache-restore
-        with:
-          path: ~/.local/share/uv/python
-          key: ${{ runner.os }}-python-3.13-${{ hashFiles('.github/workflows/fetch-static-fragrance-data.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-python-3.13-
-
-      - name: Install Python (managed by uv)
-        if: steps.python-cache-restore.outputs.cache-hit != 'true'
-        run: uv python install 3.13
-        
-      - name: Save Python installation
-        if: steps.python-cache-restore.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: ~/.local/share/uv/python
-          key: ${{ runner.os }}-python-3.13-${{ hashFiles('.github/workflows/fetch-static-fragrance-data.yaml') }}
+          enable-cache: true
+          python-version: "3.13"
 
       - name: Sync dependencies (locked)
         run: uv sync --frozen
