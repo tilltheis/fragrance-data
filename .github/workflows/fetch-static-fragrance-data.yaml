@@ -13,17 +13,20 @@ concurrency:
 
 jobs:
   run:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
  
     steps:
-      - name: Check for [app:add] commits
+      - name: Check for [app:user:add] commits
         id: check
         run: |
           jq -r '.commits[].message' "$GITHUB_EVENT_PATH" \
-            | grep '^\[app:add\]' \
-            | sed -E 's/^\[app:add\]//' \
-            > $RUNNER_TEMP/queries.jsonl
-          echo "count=$(wc -l < $RUNNER_TEMP/queries.jsonl)" >> $GITHUB_OUTPUT
+            | grep '^\[app:user:add\] ' \
+            | sed -E 's/^\[app:user:add\] //' \
+            > "$RUNNER_TEMP/queries.jsonl"
+          count=$(wc -l < "$RUNNER_TEMP/queries.jsonl")
+          echo "Found $count [app:user:add] commits."
+          echo "count=$count" >> $GITHUB_OUTPUT
 
       - uses: actions/checkout@v4
         if: steps.check.outputs.count != '0'
@@ -44,8 +47,23 @@ jobs:
         if: steps.check.outputs.count != '0'
         run: uv run collect_missing_data.py -i $RUNNER_TEMP/queries.jsonl -o frontend/src/data/static-fragrance-data.jsonl
 
-      - name: Show changes
+      - name: Commit & push changes
         if: steps.check.outputs.count != '0'
         run: |
-          git status --porcelain
-          git diff --stat || true
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data frontend/src/data/static-fragrance-data.jsonl
+
+          queries=$(paste -sd, "$RUNNER_TEMP/queries.jsonl")
+          git commit -m "[app:bot:add] [$queries]"
+
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}"
+          git push origin HEAD:"${GITHUB_REF_NAME:-main}"
