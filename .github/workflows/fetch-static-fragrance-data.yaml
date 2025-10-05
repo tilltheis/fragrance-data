@@ -19,7 +19,7 @@ jobs:
       - name: Check for [app:add] commits
         id: check
         run: |
-          jq -r '.commits[].message' push_event.json \
+          jq -r '.commits[].message' "$GITHUB_EVENT_PATH" \
             | grep '^\[app:add\]' \
             | sed -E 's/^\[app:add\]//' \
             > $RUNNER_TEMP/queries.jsonl
