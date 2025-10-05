@@ -23,7 +23,7 @@ jobs:
             | grep '^\[app:add\]' \
             | sed -E 's/^\[app:add\]//' \
             > $RUNNER_TEMP/queries.jsonl
-          echo "count=$(wc -l $RUNNER_TEMP/queries.jsonl)" >> $GITHUB_OUTPUT
+          echo "count=$(wc -l < $RUNNER_TEMP/queries.jsonl)" >> $GITHUB_OUTPUT
 
       - uses: actions/checkout@v4
         if: steps.check.outputs.count != '0'
