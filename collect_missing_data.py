@@ -13,6 +13,7 @@ import time
 import traceback
 import sys
 import shutil
+import argparse
 
 
 def _notes(doc, cls: str) -> List[str]:
@@ -130,7 +131,7 @@ def save_data(
         f.write(text)
 
 
-def _download_data_for_perfume(brand_query: str, name_query: str) -> None:
+def _download_data_for_perfume(brand_query: str, name_query: str) -> Dict[str, str]:
     normalized_name_query = (
         name_query.replace("(EdT", "(Eau de Toilette")
         .replace("(EdP", "(Eau de Parfum")
@@ -262,148 +263,120 @@ def download_all_data():
             finally:
                 time.sleep(random.uniform(30, 120))
 
-
-def assemble_all_data():
-    print("assemble_all_data is currently disabled.")
-    # snapshot_path = "perfumes_table_snapshot.csv"
-    # output_path = "perfumes.csv"
-    # error_path = "errors.csv"
-
-    # with (
-    #     open(snapshot_path, newline="", encoding="utf-8") as infile,
-    #     open(output_path, "a", newline="", encoding="utf-8") as outfile,
-    #     open(error_path, "a", newline="", encoding="utf-8") as errfile,
-    # ):
-    #     reader = csv.DictReader(infile)
-    #     writer = csv.DictWriter(
-    #         outfile,
-    #         fieldnames=[
-    #             "id",
-    #             "brand query",
-    #             "name query",
-    #             "brand",
-    #             "name",
-    #             "concentration",
-    #         ],
-    #     )
-    #     errwriter = csv.DictWriter(
-    #         errfile,
-    #         fieldnames=["id", "brand query", "name query", "error", "stack trace"],
-    #     )
-
-    #     if not os.path.isfile(output_path):
-    #         writer.writeheader()
-
-    #     for _ in range(185):
-    #         next(reader)
-
-    #     for row in reader:
-    #         try:
-    #             id_ = row["ID"]
-    #             marke = row["Marke"]
-    #             name = row["Name"]
-
-    #             print(f"Processing {id_}: {marke} - {name}...")
-
-    #             data = _download_data_for_perfume(marke, name)
-    #             writer.writerow(
-    #                 {"id": id_, "brand query": marke, "name query": name, **data}
-    #             )
-    #             outfile.flush()
-    #         except Exception as e:
-    #             print(f"Error on {id_}: {marke} - {name}: {e}")
-
-    #             if not os.path.isfile(error_path):
-    #                 errwriter.writeheader()
-
-    #             errwriter.writerow(
-    #                 {
-    #                     "id": id_,
-    #                     "brand query": marke,
-    #                     "name query": name,
-    #                     "error": str(e),
-    #                     "stack trace": traceback.format_exc(),
-    #                 }
-    #             )
-    #             errfile.flush()
-    #             continue
-    #         finally:
-    #             time.sleep(random.uniform(30, 120))
-
-
 def sync_all_data():
     data_file_path = "perfumes.jsonl"
     temp_file_path = "perfumes.jsonl~"
 
-    owned_ids = {
-        56,
-        57,
-        59,
-        132,
-        148,
-        150,
-        153,
-        167,
-        168,
-        169,
-        170,
-        171,
-        172,
-        173,
-        179,
-        198,
-        199,
-        200,
-        227,
-        297,
-        184,
-        186,
-        209,
-        213,
-        246,
-        247,
-        248,
-        251,
-        253,
-        273,
-        277,
-        283,
-        285,
-        287,
-        292,
-        303,
-        307,
-        308,
-        309,
-        315,
-        317,
-        203,
-        318,
-        319,
-        320,
-        321,
-        322,
-        323,
-        324,
-        325,
-        326,
-    }
+    normalized_file_path = "perfumes.csv"
+    error_file_path = "errors.csv"
 
     with (
         open(data_file_path, "r", encoding="utf-8") as dataf,
         open(temp_file_path, "w", encoding="utf-8") as tempf,
+        open(normalized_file_path, "r", encoding="utf-8") as normalizedf,
+        open(error_file_path, "r", encoding="utf-8") as errorf,
     ):
-        data = {json.loads(line)["id"]: json.loads(line) for line in dataf}
+        data = {json.loads(line)["id"]: line for line in dataf}
 
-        for row in data.values():
-            id_ = int(row["id"])
-            data[id_]["owned"] = id_ in owned_ids
+        normalized_reader = csv.DictReader(normalizedf)
+        error_reader = csv.DictReader(errorf)
 
-        for line in data.values():
-            tempf.write(json.dumps(line, ensure_ascii=False) + "\n")
+        for row in normalized_reader:
+            id_ = row["id"]
+            brand_query = row["brand query"]
+            name_query = row["name query"]
+            brand = row["brand"]
+            name = row["name"]
+            concentration = row["concentration"] or None
+
+            print(f"Processing {id_}: {brand} - {name}...")
+
+            path = to_path("overview", brand, name, concentration)
+            if not os.path.isfile(path):
+                print(f"Missing overview file for {id_}: {brand} - {name}")
+                continue
+
+            path_classification = to_path("classification", brand, name, concentration)
+            if not os.path.isfile(path_classification):
+                print(f"Missing classification file for {id_}: {brand} - {name}")
+                continue
+
+            with (
+                open(path, encoding="utf-8") as f_overview,
+                open(path_classification, encoding="utf-8") as f_classification,
+            ):
+                overview_text = f_overview.read()
+                classification_text = f_classification.read()
+
+                try:
+                    obj = analyze_scent(overview_text, classification_text)
+                    obj |= {
+                        "id": id_,
+                        "brand query": brand_query,
+                        "name query": name_query,
+                        "brand": brand,
+                        "name": name,
+                        "concentration": concentration,
+                    }
+                    tempf.write(json.dumps(obj, ensure_ascii=False) + "\n")
+                except Exception as e:
+                    print(f"Error processing {id_}: {brand} - {name}: {e}")
+                    print(traceback.format_exc())
+                    continue
 
     shutil.move(temp_file_path, data_file_path)
 
 
 if __name__ == "__main__":
-    _download_data_for_perfume("Penhaligon's", "Blenheim Bouquet")
+    parser = argparse.ArgumentParser(description="Collect missing perfume data.")
+    parser.add_argument("-i", "--input", required=True, help="Path to queries file")
+    parser.add_argument("-o", "--output", required=True, help="Path to static data output file")
+    args = parser.parse_args()
+
+    queries_path = args.input
+    static_data_path = args.output
+
+    iteration = 0
+
+    with (open(queries_path, encoding="utf-8") as queries_file,
+          open(static_data_path, "a", encoding="utf-8") as static_data_file):
+        for query_string in queries_file:
+            query = json.loads(query_string)
+            id_ = query["id"]
+            brand_query = query["brand_query"]
+            name_query = query["name_query"]
+            print(f"Processing {id_}: {brand_query} - {name_query}...")
+
+            if iteration > 0:
+                time.sleep(random.uniform(0.5, 2))
+            iteration += 1
+
+            try:
+                base_data = _download_data_for_perfume(brand_query, name_query)
+                brand = base_data["brand"]
+                name = base_data["name"]
+                concentration = base_data["concentration"]
+
+                overview_path = to_path("overview", brand, name, concentration)
+                classification_path = to_path("classification", brand, name, concentration)
+                with (
+                    open(overview_path, encoding="utf-8") as overview_file,
+                    open(classification_path, encoding="utf-8") as classification_file,
+                ):
+                    overview_text = overview_file.read()
+                    classification_text = classification_file.read()
+
+                    additional_data = analyze_scent(overview_text, classification_text)
+                    all_data = {
+                        "id": id_,
+                        "brand_query": brand_query,
+                        "name_query": name_query,
+                        "brand": brand,
+                        "name": name,
+                        "concentration": concentration,
+                    } | additional_data
+                    static_data_file.write(json.dumps(all_data, ensure_ascii=False) + "\n")
+            except Exception as e:
+                print(f"Error: {e}")
+                print(traceback.format_exc())
+                continue
