@@ -343,8 +343,8 @@ if __name__ == "__main__":
         for query_string in queries_file:
             query = json.loads(query_string)
             id_ = query["id"]
-            brand_query = query["brand_query"]
-            name_query = query["name_query"]
+            brand_query = query["brandQuery"]
+            name_query = query["nameQuery"]
             print(f"Processing {id_}: {brand_query} - {name_query}...")
 
             if iteration > 0:
@@ -369,8 +369,8 @@ if __name__ == "__main__":
                     additional_data = analyze_scent(overview_text, classification_text)
                     all_data = {
                         "id": id_,
-                        "brand_query": brand_query,
-                        "name_query": name_query,
+                        "brandQuery": brand_query,
+                        "nameQuery": name_query,
                         "brand": brand,
                         "name": name,
                         "concentration": concentration,
