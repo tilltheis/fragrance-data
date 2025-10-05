@@ -17,15 +17,15 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-      - name: Check for [app:user:add] commits
+      - name: Check for [app:add] commits
         id: check
         run: |
           jq -r '.commits[].message' "$GITHUB_EVENT_PATH" \
-            | grep '^\[app:user:add\] ' \
-            | sed -E 's/^\[app:user:add\] //' \
+            | grep '^\[app:add\] ' \
+            | sed -E 's/^\[app:add\] //' \
             > "$RUNNER_TEMP/queries.jsonl"
           count=$(wc -l < "$RUNNER_TEMP/queries.jsonl")
-          echo "Found $count [app:user:add] commits."
+          echo "Found $count [app:add] commits."
           echo "count=$count" >> $GITHUB_OUTPUT
 
       - uses: actions/checkout@v4
@@ -63,7 +63,7 @@ jobs:
           git add data frontend/src/data/static-fragrance-data.jsonl
 
           queries=$(paste -sd, "$RUNNER_TEMP/queries.jsonl")
-          git commit -m "[app:bot:add] [$queries]"
+          git commit -m "[sys:add] [$queries]"
 
           git pull --rebase --autostash origin "${GITHUB_REF_NAME:-main}"
           git push origin HEAD:"${GITHUB_REF_NAME:-main}"
