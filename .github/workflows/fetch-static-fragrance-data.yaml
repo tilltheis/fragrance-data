@@ -45,7 +45,7 @@ jobs:
 
       - name: Run processor
         if: steps.check.outputs.count != '0'
-        run: uv run collect_missing_data.py -i $RUNNER_TEMP/queries.jsonl -o frontend/src/data/static-fragrance-data.jsonl
+        run: uv run collect_missing_data.py -i $RUNNER_TEMP/queries.jsonl -o static-fragrance-data.jsonl
 
       - name: Commit & push changes
         if: steps.check.outputs.count != '0'
@@ -60,7 +60,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data frontend/src/data/static-fragrance-data.jsonl
+          git add data static-fragrance-data.jsonl
 
           queries=$(paste -sd, "$RUNNER_TEMP/queries.jsonl")
           git commit -m "[sys:add] [$queries]"

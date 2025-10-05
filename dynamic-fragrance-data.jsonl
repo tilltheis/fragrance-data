@@ -1,0 +1,334 @@
+{"id":1,"brand_query":"Issey Miyake","name_query":"L’Eau d’Issey pour Homme (EdT)","rating":0.6,"reason":"Zitrisch, orangig, würzig, gut, nach einer weile riecht es aber leider nach Desinfektionstuch","sellers":["Douglas EEZ"],"owned":false}
+{"id":2,"brand_query":"Armani","name_query":"Acqua di Giò (EdT)","rating":0.5,"reason":"Frisch holzig langweilig ","sellers":["Douglas EEZ"],"owned":false}
+{"id":3,"brand_query":"Yves Saint Laurent","name_query":"Y (EdP)","rating":0.55,"reason":"Ähnlich acqua di gio aber süß","sellers":["Douglas EEZ"],"owned":false}
+{"id":4,"brand_query":"Hermès","name_query":"Eau des Merveilles Bleue","rating":0.5,"reason":"Langweil aquatisch ","sellers":["Douglas EEZ"],"owned":false}
+{"id":5,"brand_query":"Diptyque","name_query":"Eau de Minthé","rating":0.6,"reason":"Schön frisch, zu pferfferminzig","sellers":["Alsterhaus"],"owned":false}
+{"id":6,"brand_query":"Diptyque","name_query":"Eau Duelle (EdP)","rating":0.6,"reason":"Leicht frisch, fruchtig, zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":7,"brand_query":"Atelier Cologne","name_query":"Orange Sanguine","sellers":["Hamburger Hof Parfümerie"],"owned":false}
+{"id":8,"brand_query":"Diptyque","name_query":"Eau de Tarocco","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":9,"brand_query":"Parfums de Nicolai","name_query":"Eau d’Été","rating":0.5,"reason":"Wird am Ende apfelig seifig","sellers":["Parfums Lubner"],"owned":false}
+{"id":10,"brand_query":"Bvlgari","name_query":"Aqva Marine (EdT)","sellers":["Bvlgari"],"owned":false}
+{"id":11,"brand_query":"Hermès","name_query":"Terre d’Hermès Eau Très Fraîche","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":12,"brand_query":"Maison Margiela","name_query":"Never-Ending Summer","rating":0.6,"reason":"Frisch aber orangig","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":13,"brand_query":"Goldfield & Banks","name_query":"Pacific Rock Moss","rating":0.65,"reason":"Frisch, leicht, fruchtig, süßlich ","sellers":["Alsterhaus"],"owned":false}
+{"id":14,"brand_query":"Parfums de Marly","name_query":"Greenley","rating":0.7,"reason":"Gut und frisch, aber wie Duschgel grüner Apfel, kein Highlight ","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":15,"brand_query":"Penhaligon’s","name_query":"Sartorial","rating":0.5,"reason":"Frisch, würzig, seifig","sellers":["Alsterhaus"],"owned":false}
+{"id":16,"brand_query":"Jo Malone","name_query":"Wood Sage & Sea Salt","rating":0.65,"reason":"Holzig und Mandarine, nicht schlecht, wird mit der Zeit immer besser, am ende aber zu suess","sellers":["Alsterhaus"],"owned":false}
+{"id":17,"brand_query":"BDK Parfums","name_query":"Sel d’Argent","rating":0.75,"reason":"Sehr gut, vllt etwas zu süß und nicht ganz so frisch  - zu lavendelig/lakritzig - dritte Chance auf Haut?","sellers":["Alsterhaus"],"owned":false}
+{"id":18,"brand_query":"Pierre Guillaume","name_query":"9.1 Komorebi","rating":0.6,"reason":"Geht so","sellers":["Parfums Lubner"],"owned":false}
+{"id":19,"brand_query":"Parfums de Nicolai","name_query":"Fig Tea","rating":0.3,"reason":"Zu feigig, zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":20,"brand_query":"Marc-Antoine Barrois","name_query":"B683 Extrait","rating":0.35,"reason":"Spannend fruchtig ledrig, zu ledrig","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":21,"brand_query":"Dusita","name_query":"Erawan","sellers":["?"],"owned":false}
+{"id":22,"brand_query":"Prada","name_query":"Luna Rossa (EdT)","rating":0.4,"reason":"Frisch, lakritzig, Lavendelig, langweilig, klassisch ","sellers":["Douglas EEZ"],"owned":false}
+{"id":23,"brand_query":"Diptyque","name_query":"Eau de Lavande","reason":"wahrscheinlich zu lavendelig","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":24,"brand_query":"Jean Paul Gaultier","name_query":"Le Male Elixir","rating":0.4,"reason":"Lavendel, Lakritz, langweilig","sellers":["Douglas EEZ"],"owned":false}
+{"id":25,"brand_query":"Atelier Cologne","name_query":"Café Tuberosa","reason":"wahrscheinlich zu suess","sellers":["?"],"owned":false}
+{"id":26,"brand_query":"Maison Margiela","name_query":"Coffee Break","rating":0.7,"reason":"Kaffe, Creme, leicht frisch, leicht süß, dezent wird immer süsser, am Ende Milch mit Vanille und leichtes Holz ","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":27,"brand_query":"Bvlgari","name_query":"Eau Parfumée au Thé Vert","sellers":["Bvlgari"],"owned":false}
+{"id":28,"brand_query":"Heeley","name_query":"Sel Marin","sellers":["Parfums Lubner"],"owned":false}
+{"id":29,"brand_query":"Elizabeth Arden","name_query":"Green Tea","sellers":["Galeria"],"owned":false}
+{"id":30,"brand_query":"Guerlain","name_query":"Aqua Allegoria Herba Fresca","rating":0.8,"reason":"Richtig gut fruchtig und frisch, spritzig. gruen, zitrisch, aber irgendwie nicht 100%, mag den untergeschmack nicht","sellers":["Alsterhaus"],"owned":false}
+{"id":31,"brand_query":"Maison Margiela","name_query":"Matcha Meditation","sellers":["?"],"owned":false}
+{"id":32,"brand_query":"Armani","name_query":"Thé Yulong","rating":0.75,"reason":"Richtig teeig, richtig gut, am Ende aber leider rosenseifig, etwas langweilig","sellers":["Alsterhaus"],"owned":false}
+{"id":33,"brand_query":"Memo Paris","name_query":"Irish Leather","rating":0.75,"reason":"Ledrig, frisch spannend, Empfehlung für Winter, gut!, ueberzeugt aber nicht","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":34,"brand_query":"Bottega Veneta","name_query":"Pour Homme","sellers":["Alsterhaus"],"owned":false}
+{"id":35,"brand_query":"Miller Harris","name_query":"Vetiver Insolent","rating":0.4,"reason":"Frisch, fruchtig, zu schwer, zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":36,"brand_query":"Maison Francis Kurkdjian","name_query":"Masculin Pluriel","rating":0.3,"reason":"Zu intensiv, after shave","sellers":["Alsterhaus"],"owned":false}
+{"id":37,"brand_query":"Naomi Goodsir","name_query":"Cuir Velours","sellers":["?"],"owned":false}
+{"id":38,"brand_query":"Amouage","name_query":"Memoir Man","sellers":["tryasample"],"owned":false}
+{"id":39,"brand_query":"Hermès","name_query":"Hiris","rating":0.7,"reason":"Wie beschrieben ","sellers":["Douglas EEZ"],"owned":false}
+{"id":40,"brand_query":"Armani Privé","name_query":"Bois d’Encens","rating":0.3,"reason":"Zu holzig zu intensiv ","sellers":["Alsterhaus"],"owned":false}
+{"id":41,"brand_query":"Chanel","name_query":"Sycomore","sellers":["Chanel"],"owned":false}
+{"id":42,"brand_query":"Serge Lutens","name_query":"Cuir Mauresque","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":43,"brand_query":"Prada","name_query":"Infusion d’Iris Cèdre","sellers":["Alsterhaus","Douglas Jungfernstieg"],"owned":false}
+{"id":44,"brand_query":"Miller et Bertaux","name_query":"Menta y Menta","sellers":["Parfums Lubner"],"owned":false}
+{"id":45,"brand_query":"John Varvatos","name_query":"XX Intense","sellers":["?"],"owned":false}
+{"id":46,"brand_query":"Diptyque","name_query":"Florabellio","reason":"wahrscheinlich zu apfelig","comment":"nicht im Alsterhaus gefunden","sellers":["Parfums Lubner"],"owned":false}
+{"id":47,"brand_query":"Ralph Lauren","name_query":"Polo Double Black","sellers":["Douglas Wandelhalle"],"owned":false}
+{"id":48,"brand_query":"Pierre Guillaume","name_query":"Sambaka","sellers":["?"],"owned":false}
+{"id":49,"brand_query":"Fueguia 1833","name_query":"Arábica","sellers":["?"],"owned":false}
+{"id":50,"brand_query":"Hermès","name_query":"Brin de Réglisse","sellers":["?"],"owned":false}
+{"id":51,"brand_query":"Parfums de Marly","name_query":"Layton","rating":0.5,"reason":"Apfelig, würzig, geht so","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":52,"brand_query":"Valentino","name_query":"Uomo Born in Roma Coral Fantasy","rating":0.4,"reason":"Apfelig süß, klassisch","sellers":["Douglas EEZ"],"owned":false}
+{"id":53,"brand_query":"Parfums de Marly","name_query":"Sedley","rating":0.4,"reason":"Zitrisch dezent, seifig","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":54,"brand_query":"Creed","name_query":"Silver Mountain Water","rating":0.4,"reason":"Klar, langweilig ","sellers":["Alsterhaus"],"owned":false}
+{"id":55,"brand_query":"Calvin Klein","name_query":"CK One (EdT)","rating":0.4,"reason":"Zitrisch, frisch, leicht grün, langweilig ","sellers":["Douglas EEZ"],"owned":false}
+{"id":56,"brand_query":"Maison Margiela","name_query":"Jazz Club","rating":0.75,"reason":"Etwas süß, fruchtig, leicht ledrig, Trauben, echt gut!","sellers":["Alsterhaus"],"owned":true}
+{"id":57,"brand_query":"Maison Margiela","name_query":"Under the Lemon Trees","rating":0.85,"reason":"Sehr frisch und zitrisch, echt schön!","sellers":["Alsterhaus"],"owned":true}
+{"id":58,"brand_query":"Maison Margiela","name_query":"By the Fireplace","rating":0.35,"reason":"Sehr trockenes Holz, leicht ledrig, nicht so meins","sellers":["Alsterhaus"],"owned":false}
+{"id":59,"brand_query":"Maison Margiela","name_query":"From the Garden","rating":0.95,"reason":"Echt gut, frisch, tomatenstrauch aber auch etwas anderes was so naja ist schwer süßlich, wird mit der Zeit tomatig bitterlich grapefruitig ","sellers":["Alsterhaus"],"owned":true}
+{"id":60,"brand_query":"Maison Margiela","name_query":"Autumn Vibes","rating":0.8,"reason":"Eröffnet frisch, leicht holzig, minimal rauchig","sellers":["Alsterhaus"],"owned":false}
+{"id":61,"brand_query":"Guerlain","name_query":"Mandarine Basilic Harvest","rating":0.7,"reason":"Echt gut frisch und grün aber etwas zu fruchtig aber zu floral","sellers":["Douglas EEZ"],"owned":false}
+{"id":62,"brand_query":"Guerlain","name_query":"Tobacco Honey","rating":0.75,"reason":"Sehr spannend! Unbedingt im Winter ausprobieren  - sehr süß, wie met ","sellers":["Alsterhaus"],"owned":false}
+{"id":63,"brand_query":"Calvin Klein","name_query":"CK One Essence","rating":0.5,"reason":"Frischer als regulär, leicht seifig","sellers":["Douglas EEZ"],"owned":false}
+{"id":64,"brand_query":"Bvlgari","name_query":"Pour Homme (EDP 2024)","rating":0.7,"reason":"Holzig aber frisch","sellers":["Douglas EEZ"],"owned":false}
+{"id":65,"brand_query":"Kilian","name_query":"Imperial Tea","rating":0.6,"reason":"Zu pudrig ","sellers":["Alsterhaus"],"owned":false}
+{"id":66,"brand_query":"Montale","name_query":"Herbal Aquatica","sellers":["Parfums Lubner"],"owned":false}
+{"id":67,"brand_query":"Molinard","name_query":"Thé Basilic","sellers":["?"],"owned":false}
+{"id":68,"brand_query":"Armaf","name_query":"Club de Nuit Intense Man","sellers":["Douglas Hauptbahnhof","Douglas Überseequartier"],"owned":false}
+{"id":69,"brand_query":"Rabanne","name_query":"Invictus (EdT)","rating":0.4,"reason":"Aquatisch, frisch, langweilig ","sellers":["Douglas EEZ"],"owned":false}
+{"id":70,"brand_query":"Salvatore Ferragamo","name_query":"Uomo Signature","sellers":["?"],"owned":false}
+{"id":71,"brand_query":"Profumum Roma","name_query":"Acqua di Sale","sellers":["Parfums Lubner"],"owned":false}
+{"id":72,"brand_query":"Chanel","name_query":"Allure Homme Sport (EdT)","rating":0.3,"reason":"Zu Alkoholig, zu ?, nicht meins","sellers":["Douglas EEZ"],"owned":false}
+{"id":73,"brand_query":"Marie Jeanne","name_query":"Adèle","rating":0.7,"reason":"Frisch, holzig, fruchtig, gut","sellers":["Alsterhaus"],"owned":false}
+{"id":74,"brand_query":"Marie Jeanne","name_query":"Brume Matcha","rating":0.3,"reason":"Viel zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":75,"brand_query":"Marie Jeanne","name_query":"Tonka Lavande","rating":0.6,"reason":"Tonka, Lavendel, sehr gut, aber später zu ledrig","sellers":["Alsterhaus"],"owned":false}
+{"id":76,"brand_query":"Marie Jeanne","name_query":"Jasmin Patchouli","rating":0.2,"reason":"Zu intensiv!","sellers":["Alsterhaus"],"owned":false}
+{"id":77,"brand_query":"Miller Harris","name_query":"Tea Tonique","rating":0.5,"reason":"Frisch, spritzig, zu rosig, zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":78,"brand_query":"Miller Harris","name_query":"Wander Through the Parks","rating":0.4,"reason":"Schön frisch aber zu fruchtig, zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":79,"brand_query":"Initio","name_query":"High Frequency","rating":0.4,"reason":"Jasmin aber zu schwer, zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":80,"brand_query":"BDK Parfums","name_query":"Citrus Riviera","rating":0.7,"reason":"Frisch und super, am Ende aber leicht seifig, testen! Hat am Ende bissige pisse zitrik ","sellers":["Alsterhaus"],"owned":false}
+{"id":81,"brand_query":"Atelier Cologne","name_query":"Cédrat Enivrant","sellers":["?"],"owned":false}
+{"id":82,"brand_query":"Diptyque","name_query":"Philosykos (EdT)","rating":0.75,"reason":"Sehr lecker frisch fruchtig, dezent (edt ist süßer als Parfüm) - eintönig süß feigig","sellers":["Alsterhaus"],"owned":false}
+{"id":83,"brand_query":"Hermès","name_query":"Eau de Rhubarbe Écarlate","rating":0.35,"reason":"Sauer und süß ","sellers":["Douglas EEZ"],"owned":false}
+{"id":84,"brand_query":"Maison Crivelli","name_query":"Citrus Batikanga","rating":0.5,"reason":"Zitrisch, chilli, langweilig","sellers":["Parfums Lubner"],"owned":false}
+{"id":85,"brand_query":"Gallivant","name_query":"Tel Aviv","sellers":["?"],"owned":false}
+{"id":86,"brand_query":"Jo Malone","name_query":"Earl Grey & Cucumber","sellers":["?"],"owned":false}
+{"id":87,"brand_query":"Parle Moi de Parfum","name_query":"Cedar Woodpecker","sellers":["?"],"owned":false}
+{"id":88,"brand_query":"Diptyque","name_query":"Eau de Lierre","rating":0.7,"reason":"Sehr dezent, schwer einzuordnen ","sellers":["Alsterhaus"],"owned":false}
+{"id":89,"brand_query":"Heeley","name_query":"Menthe Fraîche","sellers":["Parfums Lubner"],"owned":false}
+{"id":90,"brand_query":"Acqua di Parma","name_query":"Colonia Leather","sellers":["Alsterhaus"],"owned":false}
+{"id":91,"brand_query":"Byredo","name_query":"Bal d’Afrique (EdP)","rating":0.7,"reason":"Zitrisch, ganz leicht fruchtig ","sellers":["Alsterhaus"],"owned":false}
+{"id":92,"brand_query":"Montale","name_query":"Aqua Gold","sellers":["Parfums Lubner"],"owned":false}
+{"id":93,"brand_query":"Maison Francis Kurkdjian","name_query":"Aqua Celestia Forte","rating":0.35,"reason":"Schön zitrisch aquatisch aber leicht seifig, rosig","sellers":["Alsterhaus"],"owned":false}
+{"id":94,"brand_query":"Amouage","name_query":"Journey Man","comment":"nicht im Alsterhaus gefunden","sellers":["50ml","tryasample"],"owned":false}
+{"id":95,"brand_query":"Hermès","name_query":"Eau de Basilic Pourpre","rating":0.75,"reason":"Ganz gut","sellers":["Douglas EEZ"],"owned":false}
+{"id":96,"brand_query":"Acqua di Parma","name_query":"Colonia Club (EdC)","rating":0.3,"reason":"Zitrisch, rosig, seifig","sellers":["Alsterhaus"],"owned":false}
+{"id":97,"brand_query":"Memo Paris","name_query":"Italian Leather","rating":0.4,"reason":"Zu süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":98,"brand_query":"Bvlgari","name_query":"Man Wood Neroli","sellers":["Bvlgari"],"owned":false}
+{"id":99,"brand_query":"Orto Parisi","name_query":"Megamare","rating":0.75,"reason":"Spannend, leicht bissig, Lakritz?","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":101,"brand_query":"Hiram Green","name_query":"Vetiver","sellers":["?"],"owned":false}
+{"id":102,"brand_query":"Maison Margiela","name_query":"(untitled) L’eau","rating":0.75,"reason":"Frisch, zitrisch, tomatenpflanze, wird leider seifig","sellers":["Alsterhaus"],"owned":false}
+{"id":103,"brand_query":"Parfums de Nicolai","name_query":"Eau de Yuzu","rating":0.75,"reason":"Leicht, zitrisch, Zitronenschale, leicht bitter ","sellers":["Alsterhaus"],"owned":false}
+{"id":104,"brand_query":"Jo Malone","name_query":"Myrrh & Tonka","rating":0.65,"reason":"Süß, leicht schwer aber auch frisch, spannend aber nicht meins","sellers":["Alsterhaus"],"owned":false}
+{"id":105,"brand_query":"Jo Malone","name_query":"Hinoki & Cedarwood","rating":0.7,"reason":"Leicht holzig, kirschig, spannend","sellers":["Alsterhaus"],"owned":false}
+{"id":106,"brand_query":"Parfums de Nicolai","name_query":"L’Eau Mixte","rating":0.7,"reason":"Frisch, zitrisch, minzig, minzig ist nicht so meins","sellers":["Alsterhaus"],"owned":false}
+{"id":107,"brand_query":"Maison Margiela","name_query":"Sailing Day","rating":0.35,"reason":"Aquatisch, seifig, langweilig","sellers":["Alsterhaus"],"owned":false}
+{"id":108,"brand_query":"Maison Margiela","name_query":"Flying","rating":0.2,"reason":"seifig","sellers":["Alsterhaus"],"owned":false}
+{"id":109,"brand_query":"Chanel","name_query":"Allure Homme Édition Blanche","rating":0.5,"reason":"Frisch, spritzig, langweilig","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":110,"brand_query":"Chanel","name_query":"Bleu de Chanel (EdP)","rating":0.5,"reason":"Frisch, würzig, langweilig","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":111,"brand_query":"La Cordée","name_query":"À la cime du cyprès","rating":0.35,"reason":"holzig süß frisch aber nicht so meins","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":112,"brand_query":"Acqua di Parma","name_query":"Colonia Essenza","rating":0.5,"reason":"Schön frisch aber riecht wie rosenseife. Nicht gut","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":113,"brand_query":"Dior","name_query":"Sauvage (EDT)","rating":0.35,"reason":"Süß, fruchtig, elegant, nicht so meins","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":114,"brand_query":"Creed","name_query":"Erolfa","rating":0.5,"reason":"Süß, seidig, frisch, langweilig","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":115,"brand_query":"Dior","name_query":"Homme Cologne","rating":0.75,"reason":"Zitronig aber nicht optimal / Fruchtig lecker gut!","sellers":["Douglas Jungfernstieg"],"owned":false}
+{"id":116,"brand_query":"Diptyque","name_query":"Tam Dao (EdT)","rating":0.5,"reason":"Holzig süß, Kakao","sellers":["Alsterhaus"],"owned":false}
+{"id":117,"brand_query":"Maison Francis Kurkdjian","name_query":"Aqua Universalis","rating":0.3,"reason":"Seifig, sehr rosig","sellers":["Alsterhaus"],"owned":false}
+{"id":118,"brand_query":"Diptyque","name_query":"Eau des Sens","rating":0.65,"reason":"Holzig, leicht zitrisch und etwas anderes","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":119,"brand_query":"Acqua di Parma","name_query":"Fico di Amalfi","rating":0.65,"reason":"Grapefruit, seifig","sellers":["Alsterhaus","Douglas Jungfernstieg"],"owned":false}
+{"id":120,"brand_query":"Maison Francis Kurkdjian","name_query":"Aqua Vitae","rating":0.4,"reason":"Seifig, rosig","sellers":["Alsterhaus"],"owned":false}
+{"id":121,"brand_query":"Le Labo","name_query":"Bergamote 22","rating":0.5,"reason":"Schön frisch aber seifig","sellers":["Alsterhaus"],"owned":false}
+{"id":122,"brand_query":"4711","name_query":"Echt Kölnisch Wasser","sellers":["Galeria"],"owned":false}
+{"id":123,"brand_query":"Yves Saint Laurent","name_query":"La Nuit de l’Homme (EDT)","rating":0.6,"reason":"Leicht süß, würzig, weich","sellers":["Douglas EEZ"],"owned":false}
+{"id":124,"brand_query":"Hermès","name_query":"Un Jardin sur le Nil","rating":0.4,"reason":"Zu blumig, rosig auch wenn floral als Idee nicht schlecht ist","sellers":["Douglas EEZ"],"owned":false}
+{"id":125,"brand_query":"Hermès","name_query":"Terre d’Hermès","rating":0.4,"reason":"Ähnlich aramis, aber rosig","sellers":["Douglas EEZ"],"owned":false}
+{"id":126,"brand_query":"Prada","name_query":"Luna Rossa Carbon","rating":0.5,"reason":"Naja, süss fruchtig dezent","sellers":["Douglas EEZ"],"owned":false}
+{"id":127,"brand_query":"Davidoff","name_query":"Cool Water Intense","rating":0.5,"reason":"Frisch aber langweilig ","sellers":["Douglas EEZ"],"owned":false}
+{"id":128,"brand_query":"Tom Ford","name_query":"Ombre Leather (EDP)","rating":0.65,"reason":"Leder, Plastik, gut, perfekt für kältere Jahreszeit, aber zu ledrig","sellers":["Douglas EEZ"],"owned":false}
+{"id":129,"brand_query":"Chanel","name_query":"Pour Monsieur (EDP)","rating":0.7,"reason":"Erst würzig, dann fruchtig süß, ganz gut","sellers":["Douglas EEZ"],"owned":false}
+{"id":130,"brand_query":"Mugler","name_query":"A*Men","rating":0.7,"reason":"Ähnlich Chanel – Pour Monsieur","sellers":["Douglas EEZ"],"owned":false}
+{"id":131,"brand_query":"Dior","name_query":"Fahrenheit (EdT)","rating":0.75,"reason":"Erst fruchtig, Leder im nachgang, ganz gut","sellers":["Douglas EEZ"],"owned":false}
+{"id":132,"brand_query":"Creed","name_query":"Love in White for Summer","rating":0.75,"reason":"frisch, schoen, echt gut, zu suess aber","sellers":["Douglas Jungfernstieg"],"owned":true}
+{"id":133,"brand_query":"Tabac","name_query":"Man","sellers":["Galeria"],"owned":false}
+{"id":134,"brand_query":"Xerjoff","name_query":"Naxos","rating":0.3,"reason":"Zu süß und Lakritz ","sellers":["Parfums Lubner"],"owned":false}
+{"id":135,"brand_query":"Heeley","name_query":"Cardinal","rating":0.7,"reason":"Weihrauch, Holz, gar nicht so schlimm aber schon Kopfschmerzen ","sellers":["Parfums Lubner"],"owned":false}
+{"id":136,"brand_query":"Acqua di Parma","name_query":"Yuzu","rating":0.7,"reason":"Zitrisch yuzu, leicht floral, richtig gut, am Ende aber langweilig zitrisch","sellers":["Alsterhaus"],"owned":false}
+{"id":137,"brand_query":"Hermès","name_query":"Un Jardin en Méditerranée","rating":0.55,"reason":"Dezent aber irgendwie seifig, apfelig ","sellers":["Alsterhaus","Douglas EEZ","Douglas Jungfernstieg"],"owned":false}
+{"id":138,"brand_query":"L’Artisan Parfumeur","name_query":"Premier Figuier","sellers":["Parfums Lubner"],"owned":false}
+{"id":139,"brand_query":"Hermès","name_query":"Un Jardin sur le Toit","rating":0.3,"reason":"Wie bodyshop grüner Apfel, seifig, rosig","sellers":["Alsterhaus","Douglas EEZ","Douglas Jungfernstieg"],"owned":false}
+{"id":140,"brand_query":"D.S. & Durga","name_query":"Italian Citrus","rating":0.6,"reason":"Geht so","sellers":["Parfums Lubner"],"owned":false}
+{"id":141,"brand_query":"Miller Harris","name_query":"Terre d’Iris","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":142,"brand_query":"D.S. & Durga","name_query":"Debaser","rating":0.75,"reason":"Frisch, fruchtig, leicht, eintoenig","sellers":["Parfums Lubner"],"owned":false}
+{"id":143,"brand_query":"Heeley","name_query":"Verveine d’Eugène","sellers":["Parfums Lubner"],"owned":false}
+{"id":144,"brand_query":"Hermès","name_query":"Eau de Citron Noir","rating":0.75,"reason":"Zitrone, Zitronenschale, schön frisch","sellers":["Alsterhaus"],"owned":false}
+{"id":145,"brand_query":"Le Labo","name_query":"Matcha 26","rating":0.5,"reason":"Süß cremig","sellers":["Alsterhaus"],"owned":false}
+{"id":146,"brand_query":"Le Labo","name_query":"Lavande 31","rating":0.3,"reason":"Seifig süß ","sellers":["Alsterhaus"],"owned":false}
+{"id":147,"brand_query":"Maison Margiela","name_query":"Beach Walk","sellers":["tryasample"],"owned":false}
+{"id":148,"brand_query":"Maison Margiela","name_query":"Whispers in the Library","rating":0.2,"reason":"viel zu suess, kopfscherz, marshmellow milch","sellers":["tryasample"],"owned":true}
+{"id":149,"brand_query":"État Libre d’Orange","name_query":"The Ghost in the Shell","rating":0.5,"reason":"Zu süß, synthetisch, zitronig","sellers":["Parfums Lubner"],"owned":false}
+{"id":150,"brand_query":"État Libre d’Orange","name_query":"Jasmin et Cigarette","rating":0.75,"reason":"interessant, pudrig floral und rauchig, wie im urlaub auf kreta als kind","sellers":["Parfums Lubner"],"owned":true}
+{"id":151,"brand_query":"Kilian","name_query":"Back to Black (Aphrodisiac)","rating":0.4,"reason":"Honig, rum, angenehm süß, würzig, schwächer bald","sellers":["Alsterhaus"],"owned":false}
+{"id":152,"brand_query":"Parfums de Marly","name_query":"Herod","rating":0.4,"reason":"zu suess","sellers":["Alsterhaus"],"owned":false}
+{"id":153,"brand_query":"Ormonde Jayne","name_query":"Montabaco Cuba","rating":0.9,"reason":"Am Ende vllt zu schwer?","sellers":["Parfums Lubner"],"owned":true}
+{"id":154,"brand_query":"Diptyque","name_query":"Volutes (EdT)","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":155,"brand_query":"Ormonde Jayne","name_query":"Verano","rating":0.4,"reason":"Süß, zitrisch-ledrig, nicht schön ","sellers":["Parfums Lubner"],"owned":false}
+{"id":156,"brand_query":"Miller Harris","name_query":"Feuilles de Tabac","rating":0.3,"reason":"Würzig, wie ätherisches Öl vllt, sowas mag ich nicht","sellers":["Alsterhaus"],"owned":false}
+{"id":157,"brand_query":"Berdoues","name_query":"Assam of India","sellers":["?"],"owned":false}
+{"id":158,"brand_query":"Fragrance du Bois","name_query":"Minuit et Demi","rating":0.6,"reason":"Anfangs schön frisch aber später süßes Kaugummi ","sellers":["Parfums Lubner"],"owned":false}
+{"id":159,"brand_query":"27 87","name_query":"Wandervogel","rating":0.65,"reason":"Anfangs schön frisch aber später Pfefferminzkaugummi","sellers":["Parfums Lubner"],"owned":false}
+{"id":160,"brand_query":"Azya","name_query":"Jalua","rating":0.4,"reason":"Wird zu ledrig holzig ","sellers":["Parfums Lubner"],"owned":false}
+{"id":161,"brand_query":"Legendary Fragrances","name_query":"Barista","sellers":["?"],"owned":false}
+{"id":162,"brand_query":"Maison Crivelli","name_query":"Bois Datchaï","rating":0.6,"reason":"Erst zitrisch, dann trocken sauer beerig","sellers":["Parfums Lubner"],"owned":false}
+{"id":163,"brand_query":"Parfums de Nicolai","name_query":"Cuir Cuba Intense","rating":0.35,"reason":"Zu süß ","sellers":["Parfums Lubner"],"owned":false}
+{"id":164,"brand_query":"D.S. & Durga","name_query":"Jazmín Yucatán","rating":0.75,"reason":"Jasmintee, sehr schön, etwas dezent, leicht pudrig, langweilig","sellers":["Parfums Lubner"],"owned":false}
+{"id":165,"brand_query":"Serge Lutens","name_query":"Ambre Sultan","rating":0.5,"reason":"Salziges Lakritz leicht, süß, würzig, langweilig","sellers":["Alsterhaus"],"owned":false}
+{"id":166,"brand_query":"Andrea Maack","name_query":"Coven","sellers":["?"],"owned":false}
+{"id":167,"brand_query":"Creed","name_query":"Centaurus","rating":0.4,"reason":"suess, warm, spicy, dann komisch, nicht mein stil","sellers":["Alsterhaus"],"owned":true}
+{"id":168,"brand_query":"Creed","name_query":"Delphinus","rating":0.2,"reason":"erst bonbon, dann gummi/leder","sellers":["Alsterhaus"],"owned":true}
+{"id":169,"brand_query":"Creed","name_query":"Fragaria","rating":0.2,"reason":"super suesse erdbeere","sellers":["Alsterhaus"],"owned":true}
+{"id":170,"brand_query":"Creed","name_query":"Eladaria","rating":0.1,"reason":"suess, rosig, alte frau","sellers":["Alsterhaus"],"owned":true}
+{"id":171,"brand_query":"Van Cleef & Arpels","name_query":"Bois Doré","rating":0.4,"reason":"suess, mandelig, gewuerzig","sellers":["Alsterhaus"],"owned":true}
+{"id":172,"brand_query":"Escentric Molecules","name_query":"Molecule 01","rating":0.5,"reason":"gin tonic, mandel, praktisch nicht wirklich wahrnehmbar, spaeter holzig","sellers":["Alsterhaus"],"owned":true}
+{"id":173,"brand_query":"Mr Marvis","name_query":"Club Marevista","rating":0.6,"reason":"aquatisch, frisch, austauschbar","sellers":["?"],"owned":true}
+{"id":174,"brand_query":"Le Labo","name_query":"Thé Noir 29 (EdP)","rating":0.6,"reason":"Schwarzer Tee, langweilig","sellers":["Alsterhaus"],"owned":false}
+{"id":175,"brand_query":"Mind Games","name_query":"Blockade","rating":0.75,"reason":"Hell fruchtig, frisch, später seifig, nicht ganz ueberzeugend","sellers":["Parfums Lubner"],"owned":false}
+{"id":176,"brand_query":"Valentino","name_query":"Uomo Born in Roma Green Stravaganza","sellers":["Alsterhaus","Douglas EEZ","Douglas Jungfernstieg"],"owned":false}
+{"id":177,"brand_query":"Serge Lutens","name_query":"Chergui","rating":0.5,"reason":"Kopfschmerz süß","sellers":["Alsterhaus"],"owned":false}
+{"id":178,"brand_query":"Ormonde Jayne","name_query":"Montabaco","rating":0.5,"reason":"Wie Montabaco Cuba aber ohne zitrisch, ohne Tabak ","sellers":["Parfums Lubner"],"owned":false}
+{"id":179,"brand_query":"État Libre d’Orange","name_query":"Nostos","rating":0.4,"reason":"leichter weihrauch, rosig","sellers":["Parfums Lubner"],"owned":true}
+{"id":180,"brand_query":"Nasomatto","name_query":"Black Afgano","comment":"wichtig","sellers":["Parfums Lubner","Alsterhaus"],"owned":false}
+{"id":181,"brand_query":"Kilian","name_query":"Intoxicated","sellers":["Alsterhaus"],"owned":false}
+{"id":182,"brand_query":"Sisley","name_query":"Eau de Campagne","rating":0.7,"reason":"Ganz leicht seifig, linear aber vielseitig ","sellers":["Alsterhaus","Douglas EEZ","Douglas Jungfernstieg"],"owned":false}
+{"id":183,"brand_query":"L’Artisan Parfumeur","name_query":"Tea for Two","sellers":["Parfums Lubner"],"owned":false}
+{"id":184,"brand_query":"Jovoy","name_query":"Pavillon Rouge","rating":0.4,"reason":"etwas kuenstlich ledrig, kuenstlich suess, kirschig, das viel zu prominente leder gefaellt gar nicht","sellers":["50ml","tryasample"],"owned":true}
+{"id":185,"brand_query":"Zoologist","name_query":"Rhinoceros (2020)","sellers":["tryasample"],"owned":false}
+{"id":186,"brand_query":"Xerjoff","name_query":"Luxor","rating":0.6,"reason":"zitrisch(?) saures/bissiges opening, ein wenig multivitamin-pisse, wird mit der zeit besser, es kommt zimt dazu","comment":"nicht bei Lubner gefunden","sellers":["tryasample"],"owned":true}
+{"id":187,"brand_query":"Nasomatto","name_query":"Sadonaso","comment":"wichtig","sellers":["Parfums Lubner","Alsterhaus"],"owned":false}
+{"id":188,"brand_query":"Yves Saint Laurent","name_query":"Rive Gauche pour Homme (2003)","sellers":["Alsterhaus","tryasample"],"owned":false}
+{"id":189,"brand_query":"Lorenzo Villoresi","name_query":"Incensi","sellers":["Marc Gebauer"],"owned":false}
+{"id":190,"brand_query":"Tauer Perfumes","name_query":"L’Air du Désert Marocain","sellers":["tryasample"],"owned":false}
+{"id":191,"brand_query":"Guerlain","name_query":"Bois d’Arménie","sellers":["EOL"],"owned":false}
+{"id":192,"brand_query":"Diptyque","name_query":"Eau Lente","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":193,"brand_query":"Xerjoff","name_query":"Golden Dallah","rating":0.6,"reason":"Würzig, leicht süß, fruchtig(?), irgendwann Weihrauch, ganz leicht Kaffee, leicht seifig, interessant, aber nicht ueberragend, dry-down ist schoener tabak mit kaffee","sellers":["Parfums Lubner"],"owned":false}
+{"id":194,"brand_query":"Xerjoff","name_query":"Starlight","sellers":["Parfums Lubner"],"owned":false}
+{"id":195,"brand_query":"Armani Privé","name_query":"Cuir Nu","sellers":["Alsterhaus"],"owned":false}
+{"id":196,"brand_query":"Giorgio Armani","name_query":"Armani Attitude","sellers":["Alsterhaus"],"owned":false}
+{"id":197,"brand_query":"Yves Saint Laurent","name_query":"Cuir (2023)","sellers":["Alsterhaus"],"owned":false}
+{"id":198,"brand_query":"Fragrance Du Bois","name_query":"Lucius","rating":0.4,"reason":"suess orientalisch, sehr leicht zitrisch, elegant, interessant, wird aber zitrisch seifig","sellers":["Parfums Lubner"],"owned":true}
+{"id":199,"brand_query":"Fragrance Du Bois","name_query":"Lovers","rating":0.1,"reason":"rosig, kopfschmerzig, leicht loesungsmittel, wird rosiger","sellers":["Parfums Lubner"],"owned":true}
+{"id":200,"brand_query":"Mind Games","name_query":"Opera Mate","rating":0.5,"reason":"kastanienkaramell, etwas kopfschmerzig aber","sellers":["Parfums Lubner"],"owned":true}
+{"id":201,"brand_query":"Mancera","name_query":"Red Tobacco","rating":0.5,"reason":"Künstlich apfelig Kopfschmerzen","sellers":["Parfums Lubner"],"owned":false}
+{"id":202,"brand_query":"Mancera","name_query":"Fig Extasy","rating":0.6,"reason":"Frisch aber etwas Lakritze , sehr dezent","sellers":["Parfums Lubner"],"owned":false}
+{"id":203,"brand_query":"BDK Parfums","name_query":"Gris Charnel","rating":0.7,"reason":"Schön feigig und langanhaltend, aber irgendwann nervig","sellers":["Alsterhaus","Parfums Lubner"],"owned":true}
+{"id":204,"brand_query":"Kilian","name_query":"Apple Brandy (on the Rocks)","sellers":["Alsterhaus","Douglas Mönckebergstraße"],"owned":false}
+{"id":205,"brand_query":"Kilian","name_query":"Angels’ Share","sellers":["Alsterhaus"],"owned":false}
+{"id":206,"brand_query":"Parfums de Marly","name_query":"Oajan","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":207,"brand_query":"Xerjoff","name_query":"Decas","sellers":["Parfums Lubner"],"owned":false}
+{"id":208,"brand_query":"D.S. & Durga","name_query":"Bowmakers","sellers":["Parfums Lubner"],"owned":false}
+{"id":209,"brand_query":"Francesca Bianchi","name_query":"Byzantine Amber","rating":0.35,"reason":"leder im hintergrund, krautig/aethaerisch im vordergund","sellers":["tryasample","50ml"],"owned":true}
+{"id":210,"brand_query":"Penhaligon’s","name_query":"Halfeti","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":211,"brand_query":"Serge Lutens","name_query":"L’Orpheline","rating":0.4,"reason":"Trocken, bissig, ätherisch ölig","sellers":["Alsterhaus"],"owned":false}
+{"id":212,"brand_query":"Matière Première","name_query":"Encens Suave","rating":0.8,"reason":"Frischer Weihrauch, süßlich, schöner leichter Weihrauch, wird leicht süß ","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":213,"brand_query":"Matière Première","name_query":"Oud Seven","rating":0.4,"reason":"schmeckt nach oud: erst holzig bitter dann orangig/multivitamin-pisse (holzige orange)","comment":"nicht im Alsterhaus gefunden, nicht bei Lubner gefunden","sellers":["tryasample"],"owned":true}
+{"id":214,"brand_query":"Diptyque","name_query":"Oud Palao","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":215,"brand_query":"Kilian","name_query":"Straight To Heaven","sellers":["Alsterhaus"],"owned":false}
+{"id":216,"brand_query":"Serge Lutens","name_query":"Arabie","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":217,"brand_query":"Serge Lutens","name_query":"Bois et Musc","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":218,"brand_query":"Serge Lutens","name_query":"Bois Oriental","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":219,"brand_query":"Guerlain","name_query":"Néroli Outrenoir","rating":0.6,"reason":"Grün seifig","sellers":["Alsterhaus"],"owned":false}
+{"id":220,"brand_query":"Xerjoff","name_query":"Amber Star","sellers":["Parfums Lubner"],"owned":false}
+{"id":221,"brand_query":"Xerjoff","name_query":"Black Moonlight","sellers":["Parfums Lubner"],"owned":false}
+{"id":222,"brand_query":"Xerjoff","name_query":"Cruz del Sur I","sellers":["Parfums Lubner"],"owned":false}
+{"id":223,"brand_query":"Tiziana Terenzi","name_query":"Sienè","comment":"wichtig","sellers":["Parfums Lubner","Douglas Jungfernstieg","tryasample"],"owned":false}
+{"id":224,"brand_query":"Mugler","name_query":"A*Men Stellar","sellers":["?"],"owned":false}
+{"id":225,"brand_query":"Guerlain","name_query":"Guerlain Homme (EdP)","rating":0.7,"reason":"Frisch, grün","sellers":["Galeria"],"owned":false}
+{"id":226,"brand_query":"Marie Jeanne","name_query":"Brume d’été","rating":0.7,"reason":"Frisch, Rosmarin, ein bisschen blumig, gut! - grün Lavendel Thymian aber zu scharf","sellers":["Alsterhaus"],"owned":false}
+{"id":227,"brand_query":"Maison Margiela","name_query":"Soul of the Forest","rating":0.7,"reason":"gewöhnungsbedürftig, muffig, aber eigtl waldig interessant, sehr subtil","sellers":["Douglas Jungfernstieg"],"owned":true}
+{"id":228,"brand_query":"Sisley","name_query":"Le Parfum","rating":0.7,"reason":"Leicht fruchtig grün","sellers":["Galeria"],"owned":false}
+{"id":229,"brand_query":"27 87","name_query":"Mosaïque","rating":0.65,"reason":"Stark Leder, leicht frisch, wird frischer und süßer, wird mit der Zeit leicht weihrauchig, bunt","sellers":["50ml","Parfums Lubner"],"owned":false}
+{"id":230,"brand_query":"Serge Lutens","name_query":"Écrin de Fumée","rating":0.6,"reason":"Schokolade","sellers":["Alsterhaus"],"owned":false}
+{"id":231,"brand_query":"Guerlain","name_query":"Vetiver","rating":0.6,"reason":"Stroh, Zitrus","sellers":["Galeria"],"owned":false}
+{"id":232,"brand_query":"Hermès","name_query":"Rocabar","rating":0.5,"reason":"Frisch zitrisch, Alkohol ","sellers":["Alsterhaus","Douglas Jungfernstieg","Douglas EEZ"],"owned":false}
+{"id":233,"brand_query":"Ormonde Jayne","name_query":"Ormonde Man","rating":0.5,"reason":"Grün fruchtig am Anfang, dann solala seifig","sellers":["Alsterhaus","Parfums Lubner"],"owned":false}
+{"id":234,"brand_query":"Guerlain","name_query":"Épices Exquises","rating":0.5,"reason":"Kardamom seifig","sellers":["Alsterhaus"],"owned":false}
+{"id":235,"brand_query":"Roja Parfums","name_query":"Apex","rating":0.4,"reason":"Fruchtig frisch, zu suess und blumig","sellers":["Alsterhaus"],"owned":false}
+{"id":236,"brand_query":"Giorgio Armani","name_query":"Oud Royal","rating":0.4,"reason":"Leicht süße Myrrhe, gut, aber spaeter zu suess","sellers":["Alsterhaus"],"owned":false}
+{"id":237,"brand_query":"Roja Parfums","name_query":"Enigma pour Homme","rating":0.4,"reason":"Würzig süß, patchouli?, floral, spannend, aber Cola die man nicht mehr vergessen kann","sellers":["Alsterhaus"],"owned":false}
+{"id":238,"brand_query":"Headspace","name_query":"Myrrhe","rating":0.3,"reason":"Süß, Kopfschmerzen , leicht zitrisch, seifig","sellers":["50ml","Alsterhaus"],"owned":false}
+{"id":239,"brand_query":"Haeckels","name_query":"Walpole (1° 24’ 9”E 51° 23’ 34”N)","sellers":["?"],"owned":false}
+{"id":241,"brand_query":"Womo","name_query":"Santal + Coffee","comment":"wichtig","sellers":["?"],"owned":false}
+{"id":242,"brand_query":"Womo","name_query":"Black Tobacco","comment":"wichtig","sellers":["?"],"owned":false}
+{"id":243,"brand_query":"19-69","name_query":"La Habana","comment":"wichtig","sellers":["?"],"owned":false}
+{"id":244,"brand_query":"Fabrizio Tagliacarne","name_query":"Icio","sellers":["?"],"owned":false}
+{"id":245,"brand_query":"Arquiste","name_query":"Nanban","sellers":["?"],"owned":false}
+{"id":246,"brand_query":"Oman Luxury","name_query":"Royal Incense","rating":0.8,"reason":"sehr rosiger beginn, spaeter weihrauch, nach 2h angenehm\nrosenweihrauch","comment":"nicht bei Lubner gefunden","sellers":["50ml","tryasample"],"owned":true}
+{"id":247,"brand_query":"Jacques Zolty","name_query":"Cubata","rating":0.5,"reason":"frisches gruen und interessant zu beginn (suesser thymian?), am ende riecht es nach getrocketter pisse","sellers":["50ml"],"owned":true}
+{"id":248,"brand_query":"Meo Fusciuni","name_query":"Luce","sellers":["50ml"],"owned":true}
+{"id":249,"brand_query":"Akro","name_query":"Awake","sellers":["50ml"],"owned":false}
+{"id":250,"brand_query":"Aedes de Venustas","name_query":"Café Tabac","sellers":["50ml"],"owned":false}
+{"id":251,"brand_query":"Śasva","name_query":"L’Amour Libertin","rating":0.6,"reason":"frisches suesses opening, fast fruchtig, dann ganz dezentes leder, langweilig und austauschbar","sellers":["50ml"],"owned":true}
+{"id":252,"brand_query":"Bon Parfumeur","name_query":"603 Cuir Encens Fève Tonka","sellers":["50ml"],"owned":false}
+{"id":253,"brand_query":"Jovoy","name_query":"La Liturgie des Heures","rating":0.7,"reason":"zypresse ziemlich balsamisch fast zitrisch, leicht kirchenraeucherharzig, dahinter weihrauch, es bleibt das balsamische, leicht und hell, zypresse ist zu praesent","sellers":["50ml"],"owned":true}
+{"id":254,"brand_query":"Amouage","name_query":"Opus XIV – Royal Tobacco","comment":"wichtig","sellers":["Alsterhaus"],"owned":false}
+{"id":255,"brand_query":"Azzaro","name_query":"Wanted by Night","comment":"wichtig","sellers":["Douglas Mercado"],"owned":false}
+{"id":256,"brand_query":"Calvin Klein","name_query":"Obsession for Men","comment":"wichtig","sellers":["Galeria"],"owned":false}
+{"id":257,"brand_query":"D.S. & Durga","name_query":"Amber Kiso","comment":"wichtig ","sellers":["Parfums Lubner"],"owned":false}
+{"id":258,"brand_query":"Serge Lutens","name_query":"Fille en Aiguilles","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":259,"brand_query":"Serge Lutens","name_query":"Chypre Rouge","comment":"nicht im Alsterhaus gefunden","sellers":["?"],"owned":false}
+{"id":260,"brand_query":"Molinard","name_query":"Ambre","sellers":["?"],"owned":false}
+{"id":261,"brand_query":"Goldfield & Banks","name_query":"Tales of Amber","sellers":["Alsterhaus"],"owned":false}
+{"id":262,"brand_query":"Calvin Klein","name_query":"Amber Gold Euphoria Men","sellers":["EOL"],"owned":false}
+{"id":263,"brand_query":"Aramis","name_query":"Aramis Classic","sellers":["Galeria"],"owned":false}
+{"id":264,"brand_query":"Mancera","name_query":"Aoud Café","sellers":["Parfums Lubner"],"owned":false}
+{"id":265,"brand_query":"Pierre Guillaume","name_query":"Myrrhiad","sellers":["Parfums Lubner"],"owned":false}
+{"id":266,"brand_query":"D.S. & Durga","name_query":"St. Vetyver","sellers":["Parfums Lubner"],"owned":false}
+{"id":267,"brand_query":"Profumum Roma","name_query":"Ambra Aurea","comment":"wichtig","sellers":["Parfums Lubner"],"owned":false}
+{"id":268,"brand_query":"Profumum Roma","name_query":"Olibanum","comment":"wichtig","sellers":["Parfums Lubner"],"owned":false}
+{"id":269,"brand_query":"Profumum Roma","name_query":"Patchouly","sellers":["Parfums Lubner"],"owned":false}
+{"id":270,"brand_query":"Pana Dora","name_query":"Imperial Wood","sellers":["Parfums Lubner"],"owned":false}
+{"id":271,"brand_query":"D.S. & Durga","name_query":"Cognac Reign","sellers":["Parfums Lubner"],"owned":false}
+{"id":272,"brand_query":"Tiziana Terenzi","name_query":"Chimaera","sellers":["tryasample"],"owned":false}
+{"id":273,"brand_query":"Tauer Perfumes","name_query":"Sundowner","rating":0.5,"reason":"alkoholische orange, zimtig, wird suesser, ganz leicht rosig, kopfschmerzig suess wenn zu dicht dran, punsch","sellers":["tryasample","50ml"],"owned":true}
+{"id":274,"brand_query":"Zoologist","name_query":"Tyrannosaurus Rex","sellers":["tryasample"],"owned":false}
+{"id":275,"brand_query":"Yves Saint Laurent","name_query":"M7 Oud Absolu","sellers":["tryasample"],"owned":false}
+{"id":276,"brand_query":"Naomi Goodsir","name_query":"Bois d’Ascèse","sellers":["tryasample"],"owned":false}
+{"id":277,"brand_query":"Francesca Bianchi","name_query":"The Dark Side","rating":0.5,"reason":"trocken holziger beginn, irgendwann kommt rauch dazu, langweilig\ntrockenes schoko-holz","sellers":["tryasample","50ml"],"owned":true}
+{"id":278,"brand_query":"Zoologist","name_query":"Camel","sellers":["tryasample"],"owned":false}
+{"id":279,"brand_query":"Yves Saint Laurent","name_query":"Babycat","rating":0.75,"reason":"Sanftes Leder mit Zimt (Vanille?) Rauch","sellers":["tryasample"],"owned":false}
+{"id":280,"brand_query":"L’Artisan Parfumeur","name_query":"Passage d’Enfer","comment":"wichtig","sellers":["Parfums Lubner"],"owned":false}
+{"id":281,"brand_query":"L’Artisan Parfumeur","name_query":"Passage d’Enfer Extrême","comment":"wichtig","sellers":["Parfums Lubner"],"owned":false}
+{"id":282,"brand_query":"Phaedon","name_query":"Tabac Rouge","sellers":["?"],"owned":false}
+{"id":283,"brand_query":"Al Haramain","name_query":"Amber Oud Tobacco Edition","rating":0.75,"reason":"suesse nelke, interessant, gut, weihnachtsgewuerze, orangig, am ende orange-vanille und mit viel fantasy tabakrauch\nrauchige orangen-zimt-vanille","sellers":["tryasample"],"owned":true}
+{"id":284,"brand_query":"Franck Boclet","name_query":"Tobacco","sellers":["?"],"owned":false}
+{"id":285,"brand_query":"Houbigant","name_query":"Tabac Nomade","rating":0.3,"reason":"kuenstlich ledrig suess, das viel zu prominente leder gefaellt gar nicht","sellers":["50ml"],"owned":true}
+{"id":286,"brand_query":"Jusbox","name_query":"Beat Café","sellers":["Alsterhaus","50ml"],"owned":false}
+{"id":287,"brand_query":"Meo Fusciuni","name_query":"Narcotico","rating":0.2,"reason":"startet mit thymian wie aramis aber schwer mit mehr, kraeuterig/anderes/opium?, nicht so meins","sellers":["50ml"],"owned":true}
+{"id":288,"brand_query":"Filippo Sorcinelli","name_query":"Reliqvia","sellers":["50ml","Parfums Lubner"],"owned":false}
+{"id":289,"brand_query":"Lalique","name_query":"Oriental Zinc","sellers":["?"],"owned":false}
+{"id":290,"brand_query":"Mind Games","name_query":"As-Suli’s Diamond","comment":"wichtig","sellers":["Parfums Lubner"],"owned":false}
+{"id":291,"brand_query":"Bon Parfumeur","name_query":"403 Myrrh Shadow","sellers":["Alsterhaus","50ml"],"owned":false}
+{"id":292,"brand_query":"Viktor & Rolf","name_query":"Spicebomb (EdT)","sellers":["tryasample"],"owned":true}
+{"id":293,"brand_query":"Reyane Tradition","name_query":"Insurrection II Wild","comment":"EUR30 => blind buy? schlechte ratings!","owned":false}
+{"id":294,"brand_query":"The Dua Brand","name_query":"When in Havana","comment":"EUR20 => blind buy? schlechte ratings!","owned":false}
+{"id":295,"brand_query":"Dior","name_query":"Vanilla Diorama","comment":"wichtig","sellers":["Alsterhaus"],"owned":false}
+{"id":296,"brand_query":"Farmacia SS. Annunziata","name_query":"Whisky Nobile","comment":"wichtig","sellers":["Parfums Lubner"],"owned":false}
+{"id":297,"brand_query":"Narciso Rodriguez","name_query":"Narciso (EdP 2014)","sellers":["Douglas Jungfernstieg","Douglas EEZ","Douglas Mercado"],"owned":true}
+{"id":298,"brand_query":"Mind Games","name_query":"Grand Master","sellers":["Parfums Lubner"],"owned":false}
+{"id":299,"brand_query":"Comme des Garçons","name_query":"Series 3: Incense – Kyoto","comment":"wichtig","sellers":["?"],"owned":false}
+{"id":300,"brand_query":"Bon Parfumeur","name_query":"603 Cuir Encens Fève Tonka","sellers":["Alsterhaus"],"owned":false}
+{"id":301,"brand_query":"Farmacia SS. Annunziata","name_query":"Via dell’Incenso","sellers":["Parfums Lubner"],"owned":false}
+{"id":302,"brand_query":"Aedes de Venustas","name_query":"Copal Azur","sellers":["50ml"],"owned":false}
+{"id":303,"brand_query":"Aedes de Venustas","name_query":"Encens Japonais","rating":0.2,"reason":"erst leder, dann kraeuter/aetherische oele, das mag ich nicht","sellers":["50ml"],"owned":true}
+{"id":304,"brand_query":"Serge Lutens","name_query":"Bornéo 1834","sellers":["?"],"owned":false}
+{"id":305,"brand_query":"Histoires de Parfums","name_query":"Noir Patchouli","comment":"wichtig","sellers":["?"],"owned":false}
+{"id":306,"brand_query":"Guerlain","name_query":"Patchouli Paris","sellers":["Alsterhaus"],"owned":false}
+{"id":307,"brand_query":"Filippo Sorcinelli","name_query":"Notre Dame Notte di Natale","rating":0.7,"reason":"leicht beissender baum, baumharzig, es bleibt der der baum/das baumharz aber mit suesser schokolade","sellers":["50ml"],"owned":true}
+{"id":308,"brand_query":"Filippo Sorcinelli","name_query":"Sacristie des Arbres","rating":0.7,"reason":"baumig/baumharzig, rauchig im hintergrund, wird immer besser","sellers":["50ml"],"owned":true}
+{"id":309,"brand_query":"Filippo Sorcinelli","name_query":"Io Non Ho Mani Che Mi Accarezzino Il Volto","rating":0.5,"reason":"intensiv, schwer, leicht beissig aetherisch/harzig","sellers":["50ml"],"owned":true}
+{"id":310,"brand_query":"Filippo Sorcinelli","name_query":"Quando_rapita_in_estasi","sellers":["50ml","Parfums Lubner"],"owned":false}
+{"id":311,"brand_query":"Les Néréides","name_query":"Patchouli Antique","sellers":["?"],"owned":false}
+{"id":312,"brand_query":"Lorenzo Villoresi","name_query":"Patchouli","sellers":["Parfums Lubner","Marc Gebauer"],"owned":false}
+{"id":313,"brand_query":"Frédéric Malle","name_query":"Monsieur.","sellers":["50ml","Alsterhaus"],"owned":false}
+{"id":314,"brand_query":"Escentric Molecules","name_query":"Molecule 01 + Patchouli","sellers":["Alsterhaus","50ml"],"owned":false}
+{"id":315,"brand_query":"Perris Monte Carlo","name_query":"Patchouli Nosy Be","rating":0.55,"reason":"erst zitrisch, dann kakaoig/suesslich, immer patch im hintergund\nkakao-patchouli","sellers":["50ml"],"owned":true}
+{"id":316,"brand_query":"Profumi di Firenze","name_query":"Patchouly Rosso","sellers":["?"],"owned":false}
+{"id":317,"brand_query":"Diptyque","name_query":"Tam Dao (EdP)","owned":true}
+{"id":318,"brand_query":"Diptyque","name_query":"34 Boulevard Saint Germain","owned":true}
+{"id":319,"brand_query":"Comptoir Sud Pacifique","name_query":"Rouge Litchi","owned":true}
+{"id":320,"brand_query":"Comptoir Sud Pacifique","name_query":"Vanille Passion (EdP)","owned":true}
+{"id":321,"brand_query":"Obvious","name_query":"Milk & Matcha","owned":true}
+{"id":322,"brand_query":"Penhaligon’s","name_query":"Blenheim Bouquet","owned":true}
+{"id":323,"brand_query":"Jovoy","name_query":"Remember Me","rating":0.6,"reason":"zitrone-sahne-torte-eroeffnung, wird leider seifig","sellers":["50ml"],"owned":true}
+{"id":324,"brand_query":"Jovoy","name_query":"Psychédélique","rating":0.45,"reason":"erst starker (bitterer?) patchouli, dann angenehmer, ganz leicht aetherisch (zitrische bitterkeit)\nsaures patchouli","sellers":["50ml"],"owned":true}
+{"id":325,"brand_query":"Jovoy","name_query":"Private Label","owned":true}
+{"id":326,"brand_query":"Mancera","name_query":"Cedrat Boise","rating":0.5,"reason":"piss-zitrone, langweilig","sellers":["tryasample"],"owned":true}
+{"id":327,"brand_query":"Essential Parfums","name_query":"Fig Infusion","rating":0.5,"reason":"eiscreme, kaugummi","sellers":["Parfums Lubner"],"owned":false}
+{"id":328,"brand_query":"L'Artisan Parfumeur","name_query":"Vétiver Écarlate","comment":"wichtig","sellers":["Parfums Lubner"],"owned":false}
+{"id":329,"brand_query":"Bentley","name_query":"Bentley for Men Intense","owned":false}
+{"id":330,"brand_query":"Xerjoff","name_query":"Empiryan","owned":false}
+{"id":331,"brand_query":"BDK Parfums","name_query":"Gris Charnel Extrait","owned":false}
+{"id":332,"brand_query":"Simone Andreoli","name_query":"Smoke of Desert","rating":0.45,"reason":"netter weihrauch, aber bissig sauer (absinth?!)","sellers":["Parfums Lubner"],"owned":false}
+{"id":333,"brand_query":"Stéphane Humbert Lucas","name_query":"Wish Come True","rating":0.3,"reason":"zu wenig duft, sonst koennte er gut sein","sellers":["Parfums Lubner"],"owned":false}
+{"id":334,"brand_query":"Xerjoff","name_query":"Zefiro","rating":0.5,"reason":"kraeuteriger most","owned":false}
+{"id":335,"brand_query":"Dior","name_query":"Bois d'Argent","rating":0.4,"reason":"muffiges holz","owned":false}
+{"id":336,"brand_query":"Electimuss","name_query":"Spice D'Arno","rating":0.4,"reason":"spices, hell, seifig","owned":false}
