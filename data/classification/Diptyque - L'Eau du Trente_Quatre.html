@@ -1,0 +1,226 @@
+
+
+	<div id="classification_community" class="chart-container mt-2">
+
+    
+    <div class="col mb-2">
+        <span class="black bold">Dufttyp</span>
+            <span class="text-sm lightgrey">(348 Stimmen)</span>
+        <div id="chartdiv4" class="chart_placeholder"></div>
+    </div>
+    <script>
+		(function() {
+			createAm5Chart('pie', 'chartdiv4', [{"ct_name":"Zitrus","votes":"44"},{"ct_name":"W\u00fcrzig","votes":"41"},{"ct_name":"Holzig","votes":"49"},{"ct_name":"Harzig","votes":"23"},{"ct_name":"Gr\u00fcn","votes":"65"},{"ct_name":"Fruchtig","votes":"32"},{"ct_name":"Frisch","votes":"61"},{"ct_name":"Blumig","votes":"33"}], function(root, data) {
+				var chart = root.container.children.push(
+					am5percent.PieChart.new(root, {
+						radius: am5.percent(60),
+						layout: root.verticalLayout,
+						paddingTop: 0
+					})
+				);
+
+				var series = chart.series.push(
+					am5percent.PieSeries.new(root, {
+						valueField: "votes",
+						categoryField: "ct_name"
+					})
+				);
+
+				series.labels.template.setAll({
+					text: "{category} {valuePercentTotal.formatNumber('#.')}%",
+					fill: am5.color("#55636F"),
+					fontSize: 11
+				});
+
+				series.ticks.template.setAll({
+					stroke: am5.color("#55636F")
+				});
+
+				series.slices.template.setAll({
+					strokeOpacity: 0
+				});
+
+				series.get("colors").set("colors", [
+										am5.color("#eae25c"),
+										am5.color("#9bbcb7"),
+										am5.color("#d79785"),
+										am5.color("#eab99e"),
+										am5.color("#98d087"),
+										am5.color("#ff94dc"),
+										am5.color("#8fb5ff"),
+										am5.color("#dddddd"),
+									]);
+
+				series.data.setAll(data);
+				series.appear(1000, 100);
+			});
+		})();
+    </script>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+
+
+    <div class="col mb-2">
+        <span class="black bold">Stil</span>
+            <span class="text-sm lightgrey">(188 Stimmen)</span>
+        <div id="chartdiv1" class="chart_placeholder"></div>
+    </div>
+    <script>
+		(function() {
+			createAm5Chart('pie', 'chartdiv1', [{"ct_name":"Herren","votes":"70"},{"ct_name":"Damen","votes":"64"},{"ct_name":"Klassisch","votes":"31"},{"ct_name":"Modern","votes":"23"}], function(root, data) {
+				var chart = root.container.children.push(
+					am5percent.PieChart.new(root, {
+						radius: am5.percent(60),
+						layout: root.verticalLayout,
+						paddingTop: 0
+					})
+				);
+
+				var series = chart.series.push(
+					am5percent.PieSeries.new(root, {
+						valueField: "votes",
+						categoryField: "ct_name"
+					})
+				);
+
+				series.labels.template.setAll({
+					text: "{category} {valuePercentTotal.formatNumber('#.')}%",
+					fill: am5.color("#55636F"),
+					fontSize: 11
+				});
+
+				series.ticks.template.setAll({
+					stroke: am5.color("#55636F")
+				});
+
+				series.slices.template.setAll({
+					strokeOpacity: 0
+				});
+
+				series.get("colors").set("colors", [
+										am5.color("#8aafee"),
+										am5.color("#f1a1f1"),
+										am5.color("#aaafc8"),
+										am5.color("#cbd5ea"),
+									]);
+
+				series.data.setAll(data);
+				series.appear(1000, 100);
+			});
+		})();
+    </script>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+
+
+    <div class="col mb-2">
+        <span class="black bold">Jahreszeit</span>
+            <span class="text-sm lightgrey">(194 Stimmen)</span>
+        <div id="chartdiv3" class="chart_placeholder"></div>
+    </div>
+    <script>
+		(function() {
+			createAm5Chart('pie', 'chartdiv3', [{"ct_name":"Winter","votes":"17"},{"ct_name":"Herbst","votes":"38"},{"ct_name":"Sommer","votes":"68"},{"ct_name":"Fr\u00fchling","votes":"71"}], function(root, data) {
+				var chart = root.container.children.push(
+					am5percent.PieChart.new(root, {
+						radius: am5.percent(60),
+						layout: root.verticalLayout,
+						paddingTop: 0
+					})
+				);
+
+				var series = chart.series.push(
+					am5percent.PieSeries.new(root, {
+						valueField: "votes",
+						categoryField: "ct_name"
+					})
+				);
+
+				series.labels.template.setAll({
+					text: "{category} {valuePercentTotal.formatNumber('#.')}%",
+					fill: am5.color("#55636F"),
+					fontSize: 11
+				});
+
+				series.ticks.template.setAll({
+					stroke: am5.color("#55636F")
+				});
+
+				series.slices.template.setAll({
+					strokeOpacity: 0
+				});
+
+				series.get("colors").set("colors", [
+										am5.color("#a2cbff"),
+										am5.color("#d9b1be"),
+										am5.color("#ffd667"),
+										am5.color("#badc82"),
+									]);
+
+				series.data.setAll(data);
+				series.appear(1000, 100);
+			});
+		})();
+    </script>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+
+
+    <div class="col mb-2">
+        <span class="black bold">Anlass</span>
+            <span class="text-sm lightgrey">(260 Stimmen)</span>
+        <div id="chartdiv2" class="chart_placeholder"></div>
+    </div>
+    <script>
+		(function() {
+			createAm5Chart('pie', 'chartdiv2', [{"ct_name":"T\u00e4glich","votes":"69"},{"ct_name":"Sport","votes":"18"},{"ct_name":"Freizeit","votes":"62"},{"ct_name":"Ausgehen","votes":"25"},{"ct_name":"Arbeit","votes":"60"},{"ct_name":"Abend","votes":"26"}], function(root, data) {
+				var chart = root.container.children.push(
+					am5percent.PieChart.new(root, {
+						radius: am5.percent(60),
+						layout: root.verticalLayout,
+						paddingTop: 0
+					})
+				);
+
+				var series = chart.series.push(
+					am5percent.PieSeries.new(root, {
+						valueField: "votes",
+						categoryField: "ct_name"
+					})
+				);
+
+				series.labels.template.setAll({
+					text: "{category} {valuePercentTotal.formatNumber('#.')}%",
+					fill: am5.color("#55636F"),
+					fontSize: 11
+				});
+
+				series.ticks.template.setAll({
+					stroke: am5.color("#55636F")
+				});
+
+				series.slices.template.setAll({
+					strokeOpacity: 0
+				});
+
+				series.get("colors").set("colors", [
+										am5.color("#a7dcf3"),
+										am5.color("#98e5d1"),
+										am5.color("#f6ea86"),
+										am5.color("#a096e8"),
+										am5.color("#c1c1c1"),
+										am5.color("#f480ac"),
+									]);
+
+				series.data.setAll(data);
+				series.appear(1000, 100);
+			});
+		})();
+    </script>
+	<script>
+		$('.action_show_chart').removeClass('hide');
+	</script>
+
