@@ -15,7 +15,7 @@ class Test(TestCase):
         data = analyze_scent(parfumo_text, parfumo_classification_text)
 
         assert data == {
-             # "scent": 79.476,
+            # "scent": 79.476,
             "scent": {
                 "0": 2,
                 "10": 1,
@@ -61,7 +61,6 @@ class Test(TestCase):
             "pricing": {
                 "0": 1,
                 "10": 0,
-                "100": 6,
                 "20": 2,
                 "30": 1,
                 "40": 0,
@@ -70,6 +69,7 @@ class Test(TestCase):
                 "70": 32,
                 "80": 29,
                 "90": 16,
+                "100": 6,
             },
             "structure": "pyramid",
             "head": ["Zimt", "Bergamotte"],
@@ -146,3 +146,90 @@ class Test(TestCase):
             analyze_scent(parfumo_text, parfumo_classification_text)["occasion"]
             is not None
         )
+
+    def test__new_pyramid(self):
+        parfumo_text = open(
+            "data/overview/Etat Libre d'Orange - Like This.html", encoding="utf-8"
+        ).read()
+        parfumo_classification_text = open(
+            "data/classification/Etat Libre d'Orange - Like This.html",
+            encoding="utf-8",
+        ).read()
+
+        data = analyze_scent(parfumo_text, parfumo_classification_text)
+
+        assert data == {
+            "scent": {
+                "0": 1,
+                "10": 3,
+                "20": 1,
+                "30": 10,
+                "40": 12,
+                "50": 28,
+                "60": 56,
+                "70": 98,
+                "80": 64,
+                "90": 47,
+                "100": 17,
+            },
+            "longevity": {
+                "0": 0,
+                "10": 0,
+                "20": 2,
+                "30": 1,
+                "40": 3,
+                "50": 22,
+                "60": 31,
+                "70": 123,
+                "80": 48,
+                "90": 5,
+                "100": 16,
+            },
+            "sillage": {
+                "0": 0,
+                "10": 0,
+                "20": 7,
+                "30": 2,
+                "40": 8,
+                "50": 53,
+                "60": 69,
+                "70": 70,
+                "80": 18,
+                "90": 5,
+                "100": 7,
+            },
+            "pricing": {
+                "0": 0,
+                "10": 0,
+                "20": 2,
+                "30": 0,
+                "40": 5,
+                "50": 9,
+                "60": 15,
+                "70": 31,
+                "80": 23,
+                "90": 5,
+                "100": 8,
+            },
+            "structure": "pyramid",
+            "head": ["Ingwer", "Kürbis", "Mandarine"],
+            "heart": ["Immortelle", "Neroli", "Rose"],
+            "base": ["Heliotrop", "Moschus", "Vetiver"],
+            "season": {"Winter": 66, "Herbst": 134, "Sommer": 43, "Frühling": 82},
+            "occasion": {
+                "Täglich": 99,
+                "Freizeit": 108,
+                "Ausgehen": 48,
+                "Arbeit": 72,
+                "Abend": 67,
+            },
+             "type": {
+                "Würzig": 123,
+                "Süß": 79,
+                "Pudrig": 28,
+                "Holzig": 35,
+                "Gourmand": 46,
+                "Fruchtig": 62,
+                "Blumig": 90,
+            },
+        }

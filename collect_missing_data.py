@@ -27,8 +27,17 @@ def _rating(doc, cat: str) -> List[str]:
     return json.loads(base64.b64decode(res[0])) if res else None
 
 
-def _classification(text, chart: str) -> List[str]:
+def _classification1(text, chart: str) -> List[str]:
     pattern = f"{chart}.data = (\\[[^\\]]+\\]);"
+    match = re.search(pattern, text)
+    if not match:
+        return None
+    data = json.loads(match.group(1))
+    return {item["ct_name"]: int(item["votes"]) for item in data}
+
+
+def _classification2(text, chart: str) -> List[str]:
+    pattern = f"createAm5Chart\\('pie', '{chart}', (\\[[^\\]]+\\]),"
     match = re.search(pattern, text)
     if not match:
         return None
@@ -46,9 +55,9 @@ def analyze_scent(
         "longevity": _rating(parfumo_doc, "durability"),
         "sillage": _rating(parfumo_doc, "sillage"),
         "pricing": _rating(parfumo_doc, "pricing"),
-        "season": _classification(parfumo_classification_text, "chart3"),
-        "occasion": _classification(parfumo_classification_text, "chart2"),
-        "type": _classification(parfumo_classification_text, "chart4"),
+        "season": _classification1(parfumo_classification_text, "chart3") or _classification2(parfumo_classification_text, "chartdiv3"),
+        "occasion": _classification1(parfumo_classification_text, "chart2") or _classification2(parfumo_classification_text, "chartdiv2"),
+        "type": _classification1(parfumo_classification_text, "chart4") or _classification2(parfumo_classification_text, "chartdiv4"),
     }
 
     notes = _notes(parfumo_doc, "n")
